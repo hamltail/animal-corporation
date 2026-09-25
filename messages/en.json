@@ -27,12 +27,12 @@
   },
   "Service": {
     "label": "Services",
-    "introFirst": "From design and front-end development to information architecture.",
-    "introSecond": "We create websites with a strong focus on user experience.",
-    "webDesign": "We provide effective web design aligned with your brand and goals.",
-    "uiUxDesign": "We design meaningful experiences through a user-centered approach.",
-    "frontEndDevelopment": "We build front ends with a focus on performance and maintainability.",
-    "informationArchitecture": "We organize information and create structures that are easy to navigate."
+    "introFirst": "From design and development to quality improvement.",
+    "introSecond": "We create websites and web services with a focus on user experience.",
+    "webDesign": "We create clear and engaging web designs tailored to each brand and purpose.",
+    "uiUxDesign": "We organize information and user flows to create clear and easy-to-use experiences.",
+    "webDevelopment": "We choose technologies that fit each purpose and operation to develop websites and web services.",
+    "qualityImprovement": "We use and test what we create to identify issues and continuously improve quality and user experience."
   },
   "Projects": {
     "label": "Projects",

@@ -45,8 +45,8 @@ const services = [
     ),
   },
   {
-    title: "Front-end Development",
-    messageKey: "frontEndDevelopment",
+    title: "Web Development",
+    messageKey: "webDevelopment",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -65,8 +65,8 @@ const services = [
     ),
   },
   {
-    title: "Information Architecture",
-    messageKey: "informationArchitecture",
+    title: "Quality & Improvement",
+    messageKey: "qualityImprovement",
     icon: (
       <svg
         viewBox="0 0 64 64"

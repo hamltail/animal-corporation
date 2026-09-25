@@ -27,12 +27,12 @@
   },
   "Service": {
     "label": "事業内容",
-    "introFirst": "デザインからフロントエンド実装、情報設計まで。",
-    "introSecond": "ユーザー体験を重視したWebサイト制作を提供しています。",
-    "webDesign": "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
-    "uiUxDesign": "ユーザー中心の設計で、価値ある体験を設計します。",
-    "frontEndDevelopment": "パフォーマンスとメンテナンス性を重視した実装を行います。",
-    "informationArchitecture": "情報設計を整え、使いやすい構造を作ります。"
+    "introFirst": "デザインから開発、品質改善まで。",
+    "introSecond": "ユーザー体験を重視したWebサイト・Webサービスを提供しています。",
+    "webDesign": "ブランドや目的に合わせて、伝わりやすく魅力的なWebデザインをつくります。",
+    "uiUxDesign": "情報設計や導線を整え、わかりやすく使いやすい体験を設計します。",
+    "webDevelopment": "目的や運用に合わせて技術を選び、WebサイトやWebサービスを開発します。",
+    "qualityImprovement": "実際に使い、試しながら課題を見つけ、品質とユーザー体験を継続的に改善します。"
   },
   "Projects": {
     "label": "制作実績",
