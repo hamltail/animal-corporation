@@ -22,23 +22,25 @@ export default function Recruit() {
         </div>
 
         <div className="text-center">
-          <h3 className="mt-16 text-2xl leading-[1.3] font-medium md:text-[28px] lg:mt-24 lg:text-[32px]">
-            {t("title")}
-          </h3>
+          <div className="catchphrase-area">
+            <h3 className="catchphrase-title mt-16 text-2xl leading-[1.3] font-medium md:text-[28px] lg:mt-24 lg:text-[32px]">
+              {t("title")}
+            </h3>
 
-          <p className="text-muted mx-auto mt-16 max-w-170 text-base leading-loose">
-            {t("gorilla")}
-            <br />
-            {t("kangaroo")}
-            <br />
-            {t("cat")}
-            <br />
-            {t("dog")}
-          </p>
+            <p className="text-muted mx-auto mt-16 max-w-170 text-base leading-loose">
+              {t("gorilla")}
+              <br />
+              {t("kangaroo")}
+              <br />
+              {t("cat")}
+              <br />
+              {t("dog")}
+            </p>
 
-          <p className="text-muted mx-auto mt-4 max-w-170 text-base">
-            {t("description")}
-          </p>
+            <p className="text-muted mx-auto mt-4 max-w-170 text-base">
+              {t("description")}
+            </p>
+          </div>
 
           <a
             href="mailto:recruit@example.com"

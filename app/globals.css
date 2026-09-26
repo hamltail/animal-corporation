@@ -126,6 +126,12 @@
     transform: translateX(-100%);
   }
 
+  .catchphrase-title {
+    transition:
+      color 0.4s ease,
+      text-shadow 0.55s ease;
+  }
+
   .nav-link {
     @apply text-muted relative inline-block transition-colors duration-300;
   }
@@ -334,6 +340,20 @@
   }
 
   @media (hover: hover) {
+    .catchphrase-area:hover .catchphrase-title {
+      color: var(--primary);
+      text-shadow:
+        0 0 6px rgba(179, 145, 59, 0.2),
+        0 0 14px rgba(179, 145, 59, 0.12);
+    }
+
+    .dark .catchphrase-area:hover .catchphrase-title {
+      text-shadow:
+        0 0 6px rgba(210, 180, 93, 0.65),
+        0 0 14px rgba(210, 180, 93, 0.38),
+        0 0 28px rgba(210, 180, 93, 0.2);
+    }
+
     .cta-button:hover::before {
       transform: translateX(0);
     }

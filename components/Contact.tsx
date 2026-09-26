@@ -22,13 +22,15 @@ export default function Contact() {
         </div>
 
         <div className="text-center">
-          <h3 className="mt-16 text-2xl leading-[1.3] font-medium md:text-[28px] lg:mt-24 lg:text-[32px]">
-            {t("title")}
-          </h3>
+          <div className="catchphrase-area">
+            <h3 className="catchphrase-title mt-16 text-2xl leading-[1.3] font-medium md:text-[28px] lg:mt-24 lg:text-[32px]">
+              {t("title")}
+            </h3>
 
-          <p className="text-muted mx-auto mt-10 max-w-170 text-base leading-[1.8] md:mt-12 lg:mt-16">
-            {t("description")}
-          </p>
+            <p className="text-muted mx-auto mt-10 max-w-170 text-base leading-[1.8] md:mt-12 lg:mt-16">
+              {t("description")}
+            </p>
+          </div>
 
           <a
             href="mailto:info@example.com"
