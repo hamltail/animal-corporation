@@ -157,31 +157,16 @@ export default function Team() {
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {members.map((member) => {
-              const hasCasualImage = "casualImage" in member;
-
-              return (
-                <article
-                  key={member.id}
-                  className={`team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl ${
-                    hasCasualImage ? "cursor-pointer" : ""
-                  }`}
-                  onClick={() => {
-                    if (hasCasualImage) {
-                      openModal(member.id);
-                    }
-                  }}
-                  onKeyDown={(event) => {
-                    if (
-                      hasCasualImage &&
-                      (event.key === "Enter" || event.key === " ")
-                    ) {
-                      event.preventDefault();
-                      openModal(member.id);
-                    }
-                  }}
-                  role={hasCasualImage ? "button" : undefined}
-                  tabIndex={hasCasualImage ? 0 : undefined}
+            {members.map((member) => (
+              <article
+                key={member.id}
+                className="team-card project-shadow bg-surface-soft overflow-hidden rounded-2xl"
+              >
+                <button
+                  type="button"
+                  className="flex h-full w-full cursor-pointer flex-col text-left"
+                  onClick={() => openModal(member.id)}
+                  aria-label={`${t(`${member.id}.name`)}の休日画像を表示`}
                 >
                   <div className="bg-surface-soft relative aspect-square w-full overflow-hidden">
                     <Image
@@ -207,9 +192,9 @@ export default function Team() {
                       {t(`${member.id}.message`)}
                     </p>
                   </div>
-                </article>
-              );
-            })}
+                </button>
+              </article>
+            ))}
           </div>
         </Container>
       </section>

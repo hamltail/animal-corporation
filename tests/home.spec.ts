@@ -468,6 +468,42 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   ).toHaveAttribute("href", "#contact");
 });
 
+test("Teamメンバーの休日画像をモーダルで表示して閉じられる", async ({
+  page,
+}) => {
+  await page.goto("/");
+
+  const team = page.locator("#team");
+
+  await team.scrollIntoViewIfNeeded();
+
+  const goroButton = team.getByRole("button", {
+    name: "黒森 ゴロウの休日画像を表示",
+  });
+
+  await goroButton.click();
+
+  const dialog = page.getByRole("dialog", {
+    name: "黒森 ゴロウ",
+  });
+
+  await expect(dialog).toBeVisible();
+
+  await expect(
+    dialog.getByRole("img", {
+      name: "黒森 ゴロウ",
+    }),
+  ).toBeVisible();
+
+  await dialog
+    .getByRole("button", {
+      name: "閉じる",
+    })
+    .click();
+
+  await expect(dialog).not.toBeVisible();
+});
+
 test("テーマを切り替えられる", async ({ page }) => {
   await page.goto("/");
 
