@@ -146,9 +146,31 @@
   }
 
   .team-card {
+    --team-color: var(--foreground);
+
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
+  }
+
+  .team-blue {
+    --team-color: #4285f4;
+  }
+
+  .team-red {
+    --team-color: #ea4335;
+  }
+
+  .team-yellow {
+    --team-color: #fbbc05;
+  }
+
+  .team-green {
+    --team-color: #34a853;
+  }
+
+  .team-member-name {
+    transition: color 0.35s ease;
   }
 
   .about-value-card {
@@ -311,6 +333,10 @@
 
     .team-card:hover {
       transform: translateY(-4px);
+    }
+
+    .team-card:hover .team-member-name {
+      color: var(--team-color);
     }
 
     .dark .team-card:hover {
