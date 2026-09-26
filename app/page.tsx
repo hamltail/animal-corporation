@@ -7,10 +7,11 @@ import Projects from "@/components/Projects";
 import Recruit from "@/components/Recruit";
 import Service from "@/components/Service";
 import Team from "@/components/Team";
+import TeamSelectionProvider from "@/components/TeamSelectionProvider";
 
 export default function Home() {
   return (
-    <>
+    <TeamSelectionProvider>
       <Hero />
 
       <FadeIn>
@@ -40,6 +41,6 @@ export default function Home() {
       <FadeIn>
         <Recruit />
       </FadeIn>
-    </>
+    </TeamSelectionProvider>
   );
 }

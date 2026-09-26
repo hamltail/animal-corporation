@@ -6,45 +6,50 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import Container from "@/components/Container";
+import {
+  type TeamMemberId,
+  useTeamSelection,
+} from "@/components/TeamSelectionProvider";
 
 const members = [
   {
     id: "goro",
     image: "/images/team-goro.webp",
     casualImage: "/images/team-goro-casual.webp",
+    colorClass: "team-blue",
   },
   {
     id: "ko",
     image: "/images/team-ko.webp",
     casualImage: "/images/team-ko-casual.webp",
+    colorClass: "team-red",
   },
   {
     id: "miu",
     image: "/images/team-miu.webp",
     casualImage: "/images/team-miu-casual.webp",
+    colorClass: "team-yellow",
   },
   {
     id: "ken",
     image: "/images/team-ken.webp",
     casualImage: "/images/team-ken-casual.webp",
+    colorClass: "team-green",
   },
 ] as const;
 
-type MemberId = (typeof members)[number]["id"];
-
 export default function Team() {
   const t = useTranslations("Team");
-  const [selectedMemberId, setSelectedMemberId] = useState<MemberId | null>(
-    null,
-  );
+  const { selectMember } = useTeamSelection();
+
+  const [modalMemberId, setModalMemberId] = useState<TeamMemberId | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const selectedMember = members.find(
-    (member) => member.id === selectedMemberId && "casualImage" in member,
-  );
+  const selectedMember = members.find((member) => member.id === modalMemberId);
 
-  const openModal = (memberId: MemberId) => {
-    setSelectedMemberId(memberId);
+  const openModal = (memberId: TeamMemberId) => {
+    selectMember(memberId);
+    setModalMemberId(memberId);
 
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -57,7 +62,7 @@ export default function Team() {
     setIsModalVisible(false);
 
     window.setTimeout(() => {
-      setSelectedMemberId(null);
+      setModalMemberId(null);
     }, 300);
   };
 
@@ -81,7 +86,6 @@ export default function Team() {
 
   const modal =
     selectedMember &&
-    "casualImage" in selectedMember &&
     createPortal(
       <div
         className={`fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-colors duration-300 md:p-8 ${
@@ -160,7 +164,7 @@ export default function Team() {
             {members.map((member) => (
               <article
                 key={member.id}
-                className="team-card project-shadow bg-surface-soft overflow-hidden rounded-2xl"
+                className={`team-card ${member.colorClass} project-shadow bg-surface-soft overflow-hidden rounded-2xl`}
               >
                 <button
                   type="button"
@@ -184,7 +188,7 @@ export default function Team() {
                       {t(`${member.id}.role`)}
                     </p>
 
-                    <h3 className="font-english mt-2 text-base font-bold">
+                    <h3 className="team-member-name font-english mt-2 text-base font-bold">
                       {t(`${member.id}.name`)}
                     </h3>
 

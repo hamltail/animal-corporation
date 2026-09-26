@@ -88,18 +88,48 @@
     box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
   }
 
+  .dark .project-shadow {
+    box-shadow:
+      0 0 1px rgba(255, 255, 255, 0.8),
+      0 0 8px rgba(255, 255, 255, 0.16),
+      0 0 24px rgba(255, 255, 255, 0.08);
+  }
+
+  .back-to-top {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+  }
+
+  .dark .back-to-top {
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.55),
+      0 0 10px rgba(255, 255, 255, 0.45),
+      0 0 24px rgba(255, 255, 255, 0.28),
+      0 0 40px rgba(255, 255, 255, 0.14);
+  }
+
   .chip {
     @apply bg-surface-chip text-muted inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
   }
 
   .cta-button {
-    @apply relative z-0 overflow-hidden transition-colors duration-300;
+    @apply relative z-0 overflow-hidden;
+    transition:
+      color 0.3s ease,
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.55s ease 0.12s;
   }
 
   .cta-button::before {
     content: "";
     @apply bg-primary absolute inset-0 -z-10 transition-transform duration-300;
     transform: translateX(-100%);
+  }
+
+  .catchphrase-title {
+    transition:
+      color 0.4s ease,
+      text-shadow 0.55s ease;
   }
 
   .nav-link {
@@ -121,10 +151,173 @@
     width: 100%;
   }
 
+  .news-item-title-text {
+    position: relative;
+    display: inline-block;
+    transition:
+      color 0.35s ease 0.08s,
+      text-shadow 0.5s ease 0.12s;
+  }
+
+  .news-item-title-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: 9999px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.5s ease 0.12s;
+  }
+
   .team-card {
+    --team-color: var(--foreground);
+
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
+  }
+
+  .team-blue {
+    --team-color: #4285f4;
+  }
+
+  .team-red {
+    --team-color: #ea4335;
+  }
+
+  .team-yellow {
+    --team-color: #fbbc05;
+  }
+
+  .team-green {
+    --team-color: #34a853;
+  }
+
+  .team-member-name {
+    transition: color 0.35s ease;
+  }
+
+  .about-value-card {
+    --value-color: var(--primary);
+    --value-background: var(--surface-soft);
+    --value-icon-background: var(--surface);
+    --value-glow: rgba(210, 180, 93, 0.45);
+
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .about-value-blue {
+    --value-color: #4285f4;
+    --value-background: #e8f0fe;
+    --value-icon-background: #dce8fd;
+    --value-glow: rgba(66, 133, 244, 0.6);
+  }
+
+  .about-value-red {
+    --value-color: #ea4335;
+    --value-background: #fce8e6;
+    --value-icon-background: #f9d9d6;
+    --value-glow: rgba(234, 67, 53, 0.6);
+  }
+
+  .about-value-yellow {
+    --value-color: #fbbc05;
+    --value-background: #fef7e0;
+    --value-icon-background: #fcefc3;
+    --value-glow: rgba(251, 188, 5, 0.6);
+  }
+
+  .about-value-green {
+    --value-color: #34a853;
+    --value-background: #e6f4ea;
+    --value-icon-background: #d7eddd;
+    --value-glow: rgba(52, 168, 83, 0.6);
+  }
+
+  .about-value-icon-background {
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .about-value-icon {
+    color: var(--primary);
+    transform-box: fill-box;
+    transform-origin: center;
+    transition:
+      color 0.35s ease,
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.5s ease;
+  }
+
+  .about-value-title {
+    transition: color 0.35s ease;
+  }
+
+  .service-card {
+    --service-color: var(--primary);
+    --service-background: var(--surface-soft);
+    --service-icon-background: var(--surface);
+    --service-glow: rgba(210, 180, 93, 0.45);
+
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .service-blue {
+    --service-color: #4285f4;
+    --service-background: #e8f0fe;
+    --service-icon-background: #dce8fd;
+    --service-glow: rgba(66, 133, 244, 0.6);
+  }
+
+  .service-red {
+    --service-color: #ea4335;
+    --service-background: #fce8e6;
+    --service-icon-background: #f9d9d6;
+    --service-glow: rgba(234, 67, 53, 0.6);
+  }
+
+  .service-yellow {
+    --service-color: #fbbc05;
+    --service-background: #fef7e0;
+    --service-icon-background: #fcefc3;
+    --service-glow: rgba(251, 188, 5, 0.6);
+  }
+
+  .service-green {
+    --service-color: #34a853;
+    --service-background: #e6f4ea;
+    --service-icon-background: #d7eddd;
+    --service-glow: rgba(52, 168, 83, 0.6);
+  }
+
+  .service-icon-background {
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .service-icon {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition:
+      color 0.35s ease,
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.5s ease;
+  }
+
+  .service-title {
+    transition: color 0.35s ease;
   }
 
   .dark .company-logo {
@@ -147,16 +340,219 @@
   }
 
   @media (hover: hover) {
+    .catchphrase-area:hover .catchphrase-title {
+      color: var(--primary);
+      text-shadow:
+        0 0 6px rgba(179, 145, 59, 0.2),
+        0 0 14px rgba(179, 145, 59, 0.12);
+    }
+
+    .dark .catchphrase-area:hover .catchphrase-title {
+      text-shadow:
+        0 0 6px rgba(210, 180, 93, 0.65),
+        0 0 14px rgba(210, 180, 93, 0.38),
+        0 0 28px rgba(210, 180, 93, 0.2);
+    }
+
     .cta-button:hover::before {
       transform: translateX(0);
     }
 
     .cta-button:hover {
       color: var(--primary-foreground) !important;
+      transform: translateY(-4px) scale(1.025);
+      box-shadow:
+        0 8px 18px rgba(179, 145, 59, 0.2),
+        0 0 12px rgba(179, 145, 59, 0.32),
+        0 0 28px rgba(179, 145, 59, 0.18);
+    }
+
+    .dark .cta-button:hover {
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35),
+        0 0 10px rgba(210, 180, 93, 0.5),
+        0 0 24px rgba(210, 180, 93, 0.3),
+        0 0 42px rgba(210, 180, 93, 0.16);
+    }
+
+    .news-item:hover .news-item-title-text {
+      color: var(--primary);
+      text-shadow:
+        0 0 6px rgba(179, 145, 59, 0.2),
+        0 0 14px rgba(179, 145, 59, 0.12);
+    }
+
+    .news-item:hover .news-item-title-text::after {
+      transform: scaleX(1);
+      box-shadow:
+        0 0 6px rgba(179, 145, 59, 0.38),
+        0 0 12px rgba(179, 145, 59, 0.2);
+    }
+
+    .dark .news-item:hover .news-item-title-text {
+      text-shadow:
+        0 0 6px rgba(210, 180, 93, 0.55),
+        0 0 14px rgba(210, 180, 93, 0.32),
+        0 0 24px rgba(210, 180, 93, 0.16);
+    }
+
+    .dark .news-item:hover .news-item-title-text::after {
+      box-shadow:
+        0 0 6px rgba(210, 180, 93, 0.7),
+        0 0 14px rgba(210, 180, 93, 0.4),
+        0 0 24px rgba(210, 180, 93, 0.2);
     }
 
     .team-card:hover {
       transform: translateY(-4px);
+    }
+
+    .team-card:hover .team-member-name {
+      color: var(--team-color);
+    }
+
+    .dark .team-card:hover {
+      box-shadow:
+        0 0 1px rgba(255, 255, 255, 0.85),
+        0 0 8px rgba(255, 255, 255, 0.18),
+        0 0 24px rgba(255, 255, 255, 0.1),
+        0 10px 22px rgba(255, 255, 255, 0.14);
+    }
+
+    .dark .back-to-top:hover {
+      box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.7),
+        0 0 12px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.38),
+        0 0 48px rgba(255, 255, 255, 0.2);
+    }
+
+    .about-value-card:hover {
+      background-color: var(--value-background);
+    }
+
+    .about-value-card:hover .about-value-icon-background {
+      background-color: var(--value-icon-background);
+    }
+
+    .about-value-card:hover .about-value-icon {
+      color: var(--value-color);
+      transform: translateY(-2px) scale(1.1);
+    }
+
+    .about-value-card:hover .about-value-title {
+      color: var(--value-color);
+    }
+
+    .dark .about-value-card:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--value-color) 18%,
+        var(--surface-soft)
+      );
+      box-shadow:
+        0 0 1px var(--value-glow),
+        0 0 12px color-mix(in srgb, var(--value-color) 35%, transparent),
+        0 0 28px color-mix(in srgb, var(--value-color) 18%, transparent);
+    }
+
+    .dark .about-value-card:hover .about-value-icon-background {
+      background-color: color-mix(
+        in srgb,
+        var(--value-color) 14%,
+        var(--surface)
+      );
+      box-shadow: 0 0 20px
+        color-mix(in srgb, var(--value-color) 16%, transparent);
+    }
+
+    .dark .about-value-card:hover .about-value-icon {
+      filter: drop-shadow(0 0 5px var(--value-glow))
+        drop-shadow(0 0 12px var(--value-glow));
+    }
+
+    .service-card:hover {
+      background-color: var(--service-background);
+    }
+
+    .service-card:hover .service-icon-background {
+      background-color: var(--service-icon-background);
+    }
+
+    .service-card:hover .service-icon {
+      color: var(--service-color);
+      transform: translateY(-2px) scale(1.08);
+    }
+
+    .service-card:hover .service-title {
+      color: var(--service-color);
+    }
+
+    .dark .service-card:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--service-color) 18%,
+        var(--surface-soft)
+      );
+      box-shadow:
+        0 0 1px var(--service-glow),
+        0 0 12px color-mix(in srgb, var(--service-color) 35%, transparent),
+        0 0 28px color-mix(in srgb, var(--service-color) 18%, transparent);
+    }
+
+    .dark .service-card:hover .service-icon-background {
+      background-color: color-mix(
+        in srgb,
+        var(--service-color) 14%,
+        var(--surface)
+      );
+      box-shadow: 0 0 20px
+        color-mix(in srgb, var(--service-color) 16%, transparent);
+    }
+
+    .dark .service-card:hover .service-icon {
+      filter: drop-shadow(0 0 5px var(--service-glow))
+        drop-shadow(0 0 12px var(--service-glow));
+    }
+  }
+
+  @media (hover: none) {
+    .cta-button:active::before {
+      transform: translateX(0);
+    }
+
+    .cta-button:active {
+      color: var(--primary-foreground) !important;
+      transform: translateY(-2px) scale(1.015);
+      box-shadow:
+        0 6px 14px rgba(179, 145, 59, 0.2),
+        0 0 10px rgba(179, 145, 59, 0.3),
+        0 0 22px rgba(179, 145, 59, 0.16);
+    }
+
+    .dark .cta-button:active {
+      box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.35),
+        0 0 8px rgba(210, 180, 93, 0.5),
+        0 0 20px rgba(210, 180, 93, 0.28),
+        0 0 34px rgba(210, 180, 93, 0.14);
+    }
+
+    .team-card:active {
+      transform: translateY(-2px) scale(0.99);
+    }
+
+    .team-card:active .team-member-name {
+      color: var(--team-color);
+    }
+
+    .dark .team-card:active {
+      box-shadow:
+        0 0 1px rgba(255, 255, 255, 0.85),
+        0 0 8px rgba(255, 255, 255, 0.18),
+        0 0 20px rgba(255, 255, 255, 0.1),
+        0 6px 16px rgba(255, 255, 255, 0.12);
     }
   }
 }

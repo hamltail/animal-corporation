@@ -14,7 +14,7 @@ function ValueIcon({ type }: ValueIconProps) {
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
     "aria-hidden": true,
-    className: "text-primary size-12 shrink-0",
+    className: "about-value-icon size-12 shrink-0",
   };
 
   if (type === "humanCentered") {
@@ -157,11 +157,13 @@ export default function About() {
 
         <div className="pt-0 md:pt-37.5">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <article className="bg-surface flex h-30 w-full items-center gap-6 rounded-lg px-6">
-              <ValueIcon type="humanCentered" />
+            <article className="about-value-card about-value-blue bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+              <div className="about-value-icon-background bg-surface flex size-18 shrink-0 items-center justify-center rounded-full">
+                <ValueIcon type="humanCentered" />
+              </div>
 
               <div>
-                <h3 className="font-english text-sm font-bold tracking-widest">
+                <h3 className="about-value-title font-english text-sm font-bold tracking-widest">
                   Human Centered
                 </h3>
 
@@ -171,11 +173,13 @@ export default function About() {
               </div>
             </article>
 
-            <article className="bg-surface flex h-30 w-full items-center gap-6 rounded-lg px-6">
-              <ValueIcon type="thoughtful" />
+            <article className="about-value-card about-value-red bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+              <div className="about-value-icon-background bg-surface flex size-18 shrink-0 items-center justify-center rounded-full">
+                <ValueIcon type="thoughtful" />
+              </div>
 
               <div>
-                <h3 className="font-english text-sm font-bold tracking-widest">
+                <h3 className="about-value-title font-english text-sm font-bold tracking-widest">
                   Thoughtful
                 </h3>
 
@@ -185,11 +189,13 @@ export default function About() {
               </div>
             </article>
 
-            <article className="bg-surface flex h-30 w-full items-center gap-6 rounded-lg px-6">
-              <ValueIcon type="rightTechnology" />
+            <article className="about-value-card about-value-yellow bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+              <div className="about-value-icon-background bg-surface flex size-18 shrink-0 items-center justify-center rounded-full">
+                <ValueIcon type="rightTechnology" />
+              </div>
 
               <div>
-                <h3 className="font-english text-sm font-bold tracking-widest">
+                <h3 className="about-value-title font-english text-sm font-bold tracking-widest">
                   Right Technology
                 </h3>
 
@@ -199,11 +205,13 @@ export default function About() {
               </div>
             </article>
 
-            <article className="bg-surface flex h-30 w-full items-center gap-6 rounded-lg px-6">
-              <ValueIcon type="simpleBeautiful" />
+            <article className="about-value-card about-value-green bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+              <div className="about-value-icon-background bg-surface flex size-18 shrink-0 items-center justify-center rounded-full">
+                <ValueIcon type="simpleBeautiful" />
+              </div>
 
               <div>
-                <h3 className="font-english text-sm font-bold tracking-widest">
+                <h3 className="about-value-title font-english text-sm font-bold tracking-widest">
                   Simple &amp; Beautiful
                 </h3>
 
