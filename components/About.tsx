@@ -157,7 +157,7 @@ export default function About() {
 
         <div className="pt-0 md:pt-37.5">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <article className="about-value-card bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+            <article className="about-value-card about-value-blue bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
               <ValueIcon type="humanCentered" />
 
               <div>
@@ -171,7 +171,7 @@ export default function About() {
               </div>
             </article>
 
-            <article className="about-value-card bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+            <article className="about-value-card about-value-red bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
               <ValueIcon type="thoughtful" />
 
               <div>
@@ -185,7 +185,7 @@ export default function About() {
               </div>
             </article>
 
-            <article className="about-value-card bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+            <article className="about-value-card about-value-yellow bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
               <ValueIcon type="rightTechnology" />
 
               <div>
@@ -199,7 +199,7 @@ export default function About() {
               </div>
             </article>
 
-            <article className="about-value-card bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
+            <article className="about-value-card about-value-green bg-surface-soft flex h-30 w-full items-center gap-6 rounded-lg px-6">
               <ValueIcon type="simpleBeautiful" />
 
               <div>

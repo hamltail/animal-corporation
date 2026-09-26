@@ -151,6 +151,40 @@
       box-shadow 0.3s ease;
   }
 
+  .about-value-card {
+    --value-color: var(--primary);
+    --value-background: var(--surface-soft);
+    --value-glow: rgba(210, 180, 93, 0.45);
+
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .about-value-blue {
+    --value-color: #4285f4;
+    --value-background: #e8f0fe;
+    --value-glow: rgba(66, 133, 244, 0.6);
+  }
+
+  .about-value-red {
+    --value-color: #ea4335;
+    --value-background: #fce8e6;
+    --value-glow: rgba(234, 67, 53, 0.6);
+  }
+
+  .about-value-yellow {
+    --value-color: #fbbc05;
+    --value-background: #fef7e0;
+    --value-glow: rgba(251, 188, 5, 0.6);
+  }
+
+  .about-value-green {
+    --value-color: #34a853;
+    --value-background: #e6f4ea;
+    --value-glow: rgba(52, 168, 83, 0.6);
+  }
+
   .about-value-icon {
     transform-box: fill-box;
     transform-origin: center;
@@ -239,17 +273,34 @@
         0 0 48px rgba(255, 255, 255, 0.2);
     }
 
+    .about-value-card:hover {
+      background-color: var(--value-background);
+    }
+
     .about-value-card:hover .about-value-icon {
-      color: var(--primary-hover);
+      color: var(--value-color);
       transform: translateY(-2px) scale(1.1);
     }
 
     .about-value-card:hover .about-value-title {
-      color: var(--primary);
+      color: var(--value-color);
+    }
+
+    .dark .about-value-card:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--value-color) 18%,
+        var(--surface-soft)
+      );
+      box-shadow:
+        0 0 1px var(--value-glow),
+        0 0 12px color-mix(in srgb, var(--value-color) 35%, transparent),
+        0 0 28px color-mix(in srgb, var(--value-color) 18%, transparent);
     }
 
     .dark .about-value-card:hover .about-value-icon {
-      filter: drop-shadow(0 0 8px rgba(210, 180, 93, 0.65));
+      filter: drop-shadow(0 0 5px var(--value-glow))
+        drop-shadow(0 0 12px var(--value-glow));
     }
 
     .service-card:hover .service-icon {
