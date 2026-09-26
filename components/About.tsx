@@ -59,7 +59,7 @@ export default function About() {
             <article className="bg-surface flex h-30 w-full items-center gap-6 rounded-lg px-6">
               <Image
                 src="/images/about-impactful.png"
-                alt="Impactful icon"
+                alt="Thoughtful icon"
                 width={48}
                 height={48}
                 className="size-12 object-cover"
@@ -67,11 +67,11 @@ export default function About() {
 
               <div>
                 <h3 className="font-english text-sm font-bold tracking-widest">
-                  Impactful
+                  Thoughtful
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  {t("impactful")}
+                  {t("thoughtful")}
                 </p>
               </div>
             </article>
