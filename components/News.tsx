@@ -22,7 +22,7 @@ export default function News() {
         </div>
 
         <div className="mt-12 px-0 lg:px-16">
-          <article className="border-border mb-8 flex flex-col gap-3 border-b pb-8 md:flex-row md:gap-8">
+          <article className="news-item border-border mb-8 flex flex-col gap-3 border-b pb-8 md:flex-row md:gap-8">
             <div className="md:min-w-25">
               <time dateTime="2026-07-01" className="text-muted text-sm">
                 2026.07.01
@@ -30,8 +30,11 @@ export default function News() {
             </div>
 
             <div className="flex-1">
-              <p className="text-lg font-bold">
-                {t("caffee.title")}
+              <p className="news-item-title text-lg font-bold">
+                <span className="news-item-title-text">
+                  {t("caffee.title")}
+                </span>
+
                 <span className="bg-primary text-primary-foreground ml-3 inline-block rounded-full px-3 py-1 text-xs">
                   New
                 </span>
@@ -43,7 +46,7 @@ export default function News() {
             </div>
           </article>
 
-          <article className="border-border mb-8 flex flex-col gap-3 border-b pb-8 md:flex-row md:gap-8">
+          <article className="news-item border-border mb-8 flex flex-col gap-3 border-b pb-8 md:flex-row md:gap-8">
             <div className="md:min-w-25">
               <time dateTime="2026-06-01" className="text-muted text-sm">
                 2026.06.01
@@ -51,7 +54,11 @@ export default function News() {
             </div>
 
             <div className="flex-1">
-              <p className="text-lg font-bold">{t("member.title")}</p>
+              <p className="news-item-title text-lg font-bold">
+                <span className="news-item-title-text">
+                  {t("member.title")}
+                </span>
+              </p>
 
               <p className="text-muted mt-3 text-base leading-[1.8]">
                 {t("member.description")}
@@ -59,7 +66,7 @@ export default function News() {
             </div>
           </article>
 
-          <article className="flex flex-col gap-3 md:flex-row md:gap-8">
+          <article className="news-item flex flex-col gap-3 md:flex-row md:gap-8">
             <div className="md:min-w-25">
               <time dateTime="2026-04-01" className="text-muted text-sm">
                 2026.04.01
@@ -67,7 +74,11 @@ export default function News() {
             </div>
 
             <div className="flex-1">
-              <p className="text-lg font-bold">{t("company.title")}</p>
+              <p className="news-item-title text-lg font-bold">
+                <span className="news-item-title-text">
+                  {t("company.title")}
+                </span>
+              </p>
 
               <p className="text-muted mt-3 text-base leading-[1.8]">
                 {t("company.description")}

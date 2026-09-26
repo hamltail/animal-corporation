@@ -145,6 +145,30 @@
     width: 100%;
   }
 
+  .news-item-title-text {
+    position: relative;
+    display: inline-block;
+    transition:
+      color 0.35s ease 0.08s,
+      text-shadow 0.5s ease 0.12s;
+  }
+
+  .news-item-title-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: 9999px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.5s ease 0.12s;
+  }
+
   .team-card {
     --team-color: var(--foreground);
 
@@ -329,6 +353,34 @@
         0 0 10px rgba(210, 180, 93, 0.5),
         0 0 24px rgba(210, 180, 93, 0.3),
         0 0 42px rgba(210, 180, 93, 0.16);
+    }
+
+    .news-item:hover .news-item-title-text {
+      color: var(--primary);
+      text-shadow:
+        0 0 6px rgba(179, 145, 59, 0.2),
+        0 0 14px rgba(179, 145, 59, 0.12);
+    }
+
+    .news-item:hover .news-item-title-text::after {
+      transform: scaleX(1);
+      box-shadow:
+        0 0 6px rgba(179, 145, 59, 0.38),
+        0 0 12px rgba(179, 145, 59, 0.2);
+    }
+
+    .dark .news-item:hover .news-item-title-text {
+      text-shadow:
+        0 0 6px rgba(210, 180, 93, 0.55),
+        0 0 14px rgba(210, 180, 93, 0.32),
+        0 0 24px rgba(210, 180, 93, 0.16);
+    }
+
+    .dark .news-item:hover .news-item-title-text::after {
+      box-shadow:
+        0 0 6px rgba(210, 180, 93, 0.7),
+        0 0 14px rgba(210, 180, 93, 0.4),
+        0 0 24px rgba(210, 180, 93, 0.2);
     }
 
     .team-card:hover {
