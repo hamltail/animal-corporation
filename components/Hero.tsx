@@ -1,13 +1,51 @@
+"use client";
+
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
+import {
+  type TeamMemberId,
+  useTeamSelection,
+} from "@/components/TeamSelectionProvider";
+
+const casualImages: Record<TeamMemberId, string> = {
+  goro: "/images/team-goro-casual.webp",
+  ko: "/images/team-ko-casual.webp",
+  miu: "/images/team-miu-casual.webp",
+  ken: "/images/team-ken-casual.webp",
+};
 
 export default function Hero() {
   const t = useTranslations("Hero");
+  const { selectedMemberId } = useTeamSelection();
 
   return (
-    <section className="flex min-h-150 items-center overflow-hidden md:min-h-175 lg:min-h-200">
-      <Container className="flex h-full items-center">
+    <section className="relative flex min-h-150 items-center overflow-hidden md:min-h-175 lg:min-h-200">
+      {selectedMemberId && (
+        <div
+          className="pointer-events-none absolute right-[-8%] bottom-[4%] z-0 h-[38%] w-[72%] opacity-30 md:right-0 md:bottom-[8%] md:h-[42%] md:w-[52%] md:opacity-35 lg:h-[48%] lg:w-[48%]"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
+          }}
+          aria-hidden="true"
+        >
+          <Image
+            key={selectedMemberId}
+            src={casualImages[selectedMemberId]}
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 48vw, (min-width: 768px) 52vw, 72vw"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+      )}
+
+      <Container className="relative z-10 flex h-full items-center">
         <div className="max-w-full md:max-w-160">
           <h1
             id="hero-title"

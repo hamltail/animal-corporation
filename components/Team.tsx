@@ -6,6 +6,10 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import Container from "@/components/Container";
+import {
+  type TeamMemberId,
+  useTeamSelection,
+} from "@/components/TeamSelectionProvider";
 
 const members = [
   {
@@ -34,21 +38,18 @@ const members = [
   },
 ] as const;
 
-type MemberId = (typeof members)[number]["id"];
-
 export default function Team() {
   const t = useTranslations("Team");
-  const [selectedMemberId, setSelectedMemberId] = useState<MemberId | null>(
-    null,
-  );
+  const { selectMember } = useTeamSelection();
+
+  const [modalMemberId, setModalMemberId] = useState<TeamMemberId | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const selectedMember = members.find(
-    (member) => member.id === selectedMemberId && "casualImage" in member,
-  );
+  const selectedMember = members.find((member) => member.id === modalMemberId);
 
-  const openModal = (memberId: MemberId) => {
-    setSelectedMemberId(memberId);
+  const openModal = (memberId: TeamMemberId) => {
+    selectMember(memberId);
+    setModalMemberId(memberId);
 
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -61,7 +62,7 @@ export default function Team() {
     setIsModalVisible(false);
 
     window.setTimeout(() => {
-      setSelectedMemberId(null);
+      setModalMemberId(null);
     }, 300);
   };
 
@@ -85,7 +86,6 @@ export default function Team() {
 
   const modal =
     selectedMember &&
-    "casualImage" in selectedMember &&
     createPortal(
       <div
         className={`fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-colors duration-300 md:p-8 ${
