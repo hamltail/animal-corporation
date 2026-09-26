@@ -113,7 +113,11 @@
   }
 
   .cta-button {
-    @apply relative z-0 overflow-hidden transition-colors duration-300;
+    @apply relative z-0 overflow-hidden;
+    transition:
+      color 0.3s ease,
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.55s ease 0.12s;
   }
 
   .cta-button::before {
@@ -199,6 +203,19 @@
 
     .cta-button:hover {
       color: var(--primary-foreground) !important;
+      transform: translateY(-4px) scale(1.025);
+      box-shadow:
+        0 8px 18px rgba(179, 145, 59, 0.2),
+        0 0 12px rgba(179, 145, 59, 0.32),
+        0 0 28px rgba(179, 145, 59, 0.18);
+    }
+
+    .dark .cta-button:hover {
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35),
+        0 0 10px rgba(210, 180, 93, 0.5),
+        0 0 24px rgba(210, 180, 93, 0.3),
+        0 0 42px rgba(210, 180, 93, 0.16);
     }
 
     .team-card:hover {
