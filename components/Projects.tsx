@@ -32,7 +32,7 @@ export default function Projects() {
         <ProjectCarousel>
           <ProjectCard
             title="Pawth"
-            imageSrc="/images/projects-pawth.png"
+            imageSrc="/images/projects-pawth.webp"
             imageAlt="Pawth project thumbnail"
             description={t("pawthDescription")}
             work={t("pawthWork")}
@@ -81,7 +81,7 @@ export default function Projects() {
 
           <ProjectCard
             title="Animal Corporation"
-            imageSrc="/images/projects-animal-corporation.png"
+            imageSrc="/images/projects-animal-corporation.webp"
             imageAlt="Animal Corporation project thumbnail"
             description={t("animalDescription")}
             work={t("animalWork")}
@@ -90,7 +90,7 @@ export default function Projects() {
 
           <ProjectCard
             title="Animal Caffee"
-            imageSrc="/images/projects-animal-caffee.png"
+            imageSrc="/images/projects-animal-caffee.webp"
             imageAlt="Animal Caffee project thumbnail"
             description={t("caffeeDescription")}
             work={t("caffeeWork")}
