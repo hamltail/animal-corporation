@@ -198,6 +198,51 @@
     transition: color 0.35s ease;
   }
 
+  .service-card {
+    --service-color: var(--primary);
+    --service-background: var(--surface-soft);
+    --service-icon-background: var(--surface);
+    --service-glow: rgba(210, 180, 93, 0.45);
+
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .service-blue {
+    --service-color: #4285f4;
+    --service-background: #e8f0fe;
+    --service-icon-background: #dce8fd;
+    --service-glow: rgba(66, 133, 244, 0.6);
+  }
+
+  .service-red {
+    --service-color: #ea4335;
+    --service-background: #fce8e6;
+    --service-icon-background: #f9d9d6;
+    --service-glow: rgba(234, 67, 53, 0.6);
+  }
+
+  .service-yellow {
+    --service-color: #fbbc05;
+    --service-background: #fef7e0;
+    --service-icon-background: #fcefc3;
+    --service-glow: rgba(251, 188, 5, 0.6);
+  }
+
+  .service-green {
+    --service-color: #34a853;
+    --service-background: #e6f4ea;
+    --service-icon-background: #d7eddd;
+    --service-glow: rgba(52, 168, 83, 0.6);
+  }
+
+  .service-icon-background {
+    transition:
+      background-color 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
   .service-icon {
     transform-box: fill-box;
     transform-origin: center;
@@ -303,17 +348,48 @@
         drop-shadow(0 0 12px var(--value-glow));
     }
 
+    .service-card:hover {
+      background-color: var(--service-background);
+    }
+
+    .service-card:hover .service-icon-background {
+      background-color: var(--service-icon-background);
+    }
+
     .service-card:hover .service-icon {
-      color: var(--primary);
+      color: var(--service-color);
       transform: translateY(-2px) scale(1.08);
     }
 
     .service-card:hover .service-title {
-      color: var(--primary);
+      color: var(--service-color);
+    }
+
+    .dark .service-card:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--service-color) 18%,
+        var(--surface-soft)
+      );
+      box-shadow:
+        0 0 1px var(--service-glow),
+        0 0 12px color-mix(in srgb, var(--service-color) 35%, transparent),
+        0 0 28px color-mix(in srgb, var(--service-color) 18%, transparent);
+    }
+
+    .dark .service-card:hover .service-icon-background {
+      background-color: color-mix(
+        in srgb,
+        var(--service-color) 14%,
+        var(--surface)
+      );
+      box-shadow: 0 0 20px
+        color-mix(in srgb, var(--service-color) 16%, transparent);
     }
 
     .dark .service-card:hover .service-icon {
-      filter: drop-shadow(0 0 10px rgba(210, 180, 93, 0.65));
+      filter: drop-shadow(0 0 5px var(--service-glow))
+        drop-shadow(0 0 12px var(--service-glow));
     }
   }
 }

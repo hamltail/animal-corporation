@@ -6,6 +6,7 @@ const services = [
   {
     title: "Web Design",
     messageKey: "webDesign",
+    colorClass: "service-blue",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -27,6 +28,7 @@ const services = [
   {
     title: "UI / UX Design",
     messageKey: "uiUxDesign",
+    colorClass: "service-red",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -47,6 +49,7 @@ const services = [
   {
     title: "Web Development",
     messageKey: "webDevelopment",
+    colorClass: "service-yellow",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -67,6 +70,7 @@ const services = [
   {
     title: "Quality & Improvement",
     messageKey: "qualityImprovement",
+    colorClass: "service-green",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -120,9 +124,9 @@ export default function Service() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="service-card bg-surface-soft flex min-h-80 flex-col items-start rounded-lg p-6"
+              className={`service-card ${service.colorClass} bg-surface-soft flex min-h-80 flex-col items-start rounded-lg p-6`}
             >
-              <div className="bg-surface text-foreground mx-auto flex size-32 items-center justify-center rounded-full">
+              <div className="service-icon-background bg-surface text-foreground mx-auto flex size-32 items-center justify-center rounded-full">
                 {service.icon}
               </div>
 
