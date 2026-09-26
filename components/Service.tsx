@@ -15,7 +15,7 @@ const services = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="size-20"
+        className="service-icon size-20"
       >
         <rect x="10" y="13" width="44" height="31" rx="2" />
         <path d="M26 51h12" />
@@ -36,7 +36,7 @@ const services = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="size-20"
+        className="service-icon size-20"
       >
         <rect x="21" y="7" width="22" height="50" rx="5" />
         <path d="M29 11h6" />
@@ -56,7 +56,7 @@ const services = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="size-20"
+        className="service-icon size-20"
       >
         <path d="m23 20-12 12 12 12" />
         <path d="m41 20 12 12-12 12" />
@@ -76,7 +76,7 @@ const services = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="size-20"
+        className="service-icon size-20"
       >
         <path d="M13 27a20 20 0 0 1 34-10" />
         <path d="M47 10v8h-8" />
@@ -120,14 +120,14 @@ export default function Service() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="bg-surface-soft flex min-h-80 flex-col items-start rounded-lg p-6"
+              className="service-card bg-surface-soft flex min-h-80 flex-col items-start rounded-lg p-6"
             >
               <div className="bg-surface text-foreground mx-auto flex size-32 items-center justify-center rounded-full">
                 {service.icon}
               </div>
 
               <div className="mt-6 w-full">
-                <h3 className="font-english text-lg font-bold">
+                <h3 className="service-title font-english text-lg font-bold">
                   {service.title}
                 </h3>
 
