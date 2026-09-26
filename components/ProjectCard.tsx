@@ -21,19 +21,19 @@ export default function ProjectCard({
   action,
 }: ProjectCardProps) {
   return (
-    <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl">
-      <div className="bg-surface relative h-60 w-full">
+    <article className="project-shadow bg-surface flex flex-col overflow-hidden rounded-xl transition-transform duration-300 ease-out hover:scale-[1.02]">
+      <div className="bg-surface relative aspect-video w-full overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-          className="object-contain"
+          sizes="(min-width: 768px) 480px, (min-width: 640px) 420px, 88vw"
+          className="object-cover"
         />
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between gap-4">
           <h3 className="font-english text-lg font-bold">{title}</h3>
 
           {action}
@@ -45,7 +45,7 @@ export default function ProjectCard({
 
         <div className="text-subtle mt-3 text-[13px]">{work}</div>
 
-        <div className="mt-3 flex items-center gap-3">
+        <div className="mt-3 flex flex-wrap items-center gap-3">
           {technologies.map((technology) => (
             <span key={technology} className="chip">
               {technology}

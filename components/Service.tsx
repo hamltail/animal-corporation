@@ -45,8 +45,8 @@ const services = [
     ),
   },
   {
-    title: "Front-end Development",
-    messageKey: "frontEndDevelopment",
+    title: "Web Development",
+    messageKey: "webDevelopment",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -65,8 +65,8 @@ const services = [
     ),
   },
   {
-    title: "Information Architecture",
-    messageKey: "informationArchitecture",
+    title: "Quality & Improvement",
+    messageKey: "qualityImprovement",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -78,15 +78,14 @@ const services = [
         aria-hidden="true"
         className="size-20"
       >
-        <rect x="27" y="7" width="10" height="10" rx="1" />
-        <rect x="9" y="45" width="10" height="10" rx="1" />
-        <rect x="27" y="45" width="10" height="10" rx="1" />
-        <rect x="45" y="45" width="10" height="10" rx="1" />
-        <path d="M32 17v12" />
-        <path d="M14 29h36" />
-        <path d="M14 29v16" />
-        <path d="M32 29v16" />
-        <path d="M50 29v16" />
+        <path d="M13 27a20 20 0 0 1 34-10" />
+        <path d="M47 10v8h-8" />
+
+        <path d="M51 37a20 20 0 0 1-34 10" />
+        <path d="M17 54v-8h8" />
+
+        <circle cx="32" cy="32" r="11" />
+        <path d="m27 32 3.5 3.5L38 28" />
       </svg>
     ),
   },

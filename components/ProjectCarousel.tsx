@@ -65,7 +65,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
   return (
     <div className="mt-12 overflow-x-clip">
       <div
-        className="relative mx-auto h-120 w-full max-w-6xl touch-pan-y perspective-distant select-none"
+        className="relative mx-auto h-130 w-full max-w-7xl touch-pan-y perspective-distant select-none sm:h-140"
         onPointerDown={handlePointerDown}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerCancel}
@@ -79,13 +79,13 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
             relativeIndex === 0
               ? "z-20 translate-z-0"
               : relativeIndex === 1
-                ? "z-10 translate-x-60 -translate-z-160 -rotate-y-30"
-                : "z-10 -translate-x-150 -translate-z-160 rotate-y-15";
+                ? "z-10 translate-x-60 -translate-z-160 -rotate-y-30 sm:translate-x-70 md:translate-x-80"
+                : "z-10 -translate-x-150 -translate-z-160 rotate-y-15 sm:-translate-x-175 md:-translate-x-200";
 
           return (
             <div
               key={index}
-              className={`absolute top-1/2 left-1/2 w-90 max-w-[80vw] -translate-x-1/2 -translate-y-1/2 transform-3d transition-transform duration-700 ease-in-out ${position}`}
+              className={`absolute top-1/2 left-1/2 w-[calc(100%-2rem)] max-w-90 -translate-x-1/2 -translate-y-1/2 transform-3d transition-transform duration-700 ease-in-out sm:w-105 sm:max-w-none md:w-120 ${position}`}
             >
               {project}
             </div>
@@ -95,7 +95,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
         <button
           type="button"
           onClick={showPrevious}
-          className="bg-surface/80 text-foreground absolute top-1/2 left-4 z-30 flex size-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface"
+          className="bg-surface/80 text-foreground absolute top-1/2 left-2 z-30 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface sm:left-4 sm:size-12"
           aria-label="前のプロジェクトを表示"
         >
           <svg
@@ -116,7 +116,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
         <button
           type="button"
           onClick={showNext}
-          className="bg-surface/80 text-foreground absolute top-1/2 right-4 z-30 flex size-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface"
+          className="bg-surface/80 text-foreground absolute top-1/2 right-2 z-30 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface sm:right-4 sm:size-12"
           aria-label="次のプロジェクトを表示"
         >
           <svg

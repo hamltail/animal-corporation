@@ -19,33 +19,33 @@
     "label": "About Us",
     "leadFirst": "Through design and technology,",
     "leadSecond": "we create better experiences and a better future.",
-    "description": "Animal Corporation is a design studio that creates experiences that guide people's behavior and society toward a better future through the power of design and technology. We empathize with users and create meaningful value that contributes to business growth.",
+    "description": "Animal Corporation is a small workshop that creates websites and web services through design and technology. We choose technologies that fit each purpose and operation, then continuously improve quality and user experience by using and testing what we create.",
     "humanCentered": "We put people first and design experiences around empathy.",
-    "impactful": "We create lasting impact for businesses and society.",
-    "technologyDriven": "We use the latest technologies to deliver the right solutions.",
+    "thoughtful": "We thoughtfully consider each purpose and the people who will use what we create.",
+    "rightTechnology": "We choose the right technologies for each purpose and operation.",
     "simpleBeautiful": "We pursue experiences that are simple, beautiful, and easy to use."
   },
   "Service": {
     "label": "Services",
-    "introFirst": "From design and front-end development to information architecture.",
-    "introSecond": "We create websites with a strong focus on user experience.",
-    "webDesign": "We provide effective web design aligned with your brand and goals.",
-    "uiUxDesign": "We design meaningful experiences through a user-centered approach.",
-    "frontEndDevelopment": "We build front ends with a focus on performance and maintainability.",
-    "informationArchitecture": "We organize information and create structures that are easy to navigate."
+    "introFirst": "From design and development to quality improvement.",
+    "introSecond": "We create websites and web services with a focus on user experience.",
+    "webDesign": "We create clear and engaging web designs tailored to each brand and purpose.",
+    "uiUxDesign": "We organize information and user flows to create clear and easy-to-use experiences.",
+    "webDevelopment": "We choose technologies that fit each purpose and operation to develop websites and web services.",
+    "qualityImprovement": "We use and test what we create to identify issues and continuously improve quality and user experience."
   },
   "Projects": {
     "label": "Projects",
-    "introFirst": "Explore websites and applications",
-    "introSecond": "created with our design and technology expertise.",
+    "introFirst": "Projects shaped through design, development, and quality improvement.",
+    "introSecond": "Explore the websites and web services we've worked on.",
     "pawthOpen": "Open the Pawth project",
     "pawthDescription": "Trace your daily journey. A small journaling app.",
-    "pawthWork": "Planning / Design / Development",
+    "pawthWork": "Planning / UI & UX / Development / Operation",
     "animalDescription": "Corporate website development (fictional project)",
-    "animalWork": "Information Architecture / Design / Front-end",
+    "animalWork": "Information Architecture / UI & UX / Development / Quality Improvement",
     "comingSoon": "Coming Soon",
     "caffeeDescription": "Animal Caffee website redesign (fictional project)",
-    "caffeeWork": "UI/UX Design / Coding / Photography & Asset Selection"
+    "caffeeWork": "Information Architecture / Web Design / Photography & Asset Selection"
   },
   "Team": {
     "label": "Team",
@@ -89,7 +89,7 @@
   "Contact": {
     "label": "Contact",
     "title": "Shall we create a new experience together?",
-    "description": "Feel free to contact us about service development, web production, design, or anything else.",
+    "description": "Feel free to contact us about creating or improving websites and web services.",
     "mailLabel": "Contact us by email",
     "button": "Contact Us"
   },

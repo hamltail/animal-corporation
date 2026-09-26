@@ -28,81 +28,81 @@ export default function Projects() {
           <br />
           {t("introSecond")}
         </p>
-
-        <ProjectCarousel>
-          <ProjectCard
-            title="Pawth"
-            imageSrc="/images/projects-pawth.png"
-            imageAlt="Pawth project thumbnail"
-            description={t("pawthDescription")}
-            work={t("pawthWork")}
-            technologies={["Haml", "Tailwind CSS", "Responsive"]}
-            action={
-              <a
-                href="https://pawth-lp.hamltail.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted hover:text-foreground transition-colors"
-                aria-label={t("pawthOpen")}
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M14 3h7v7"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M10 14L21 3"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M21 21H3V3"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            }
-          />
-
-          <ProjectCard
-            title="Animal Corporation"
-            imageSrc="/images/projects-animal-corporation.png"
-            imageAlt="Animal Corporation project thumbnail"
-            description={t("animalDescription")}
-            work={t("animalWork")}
-            technologies={["Figma", "HTML / CSS", "Responsive"]}
-          />
-
-          <ProjectCard
-            title="Animal Caffee"
-            imageSrc="/images/projects-animal-caffee.png"
-            imageAlt="Animal Caffee project thumbnail"
-            description={t("caffeeDescription")}
-            work={t("caffeeWork")}
-            technologies={["Figma", "HTML / CSS", "Responsive"]}
-            action={
-              <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
-                {t("comingSoon")}
-              </span>
-            }
-          />
-        </ProjectCarousel>
       </Container>
+
+      <ProjectCarousel>
+        <ProjectCard
+          title="Pawth"
+          imageSrc="/images/projects-pawth.webp"
+          imageAlt="Pawth project thumbnail"
+          description={t("pawthDescription")}
+          work={t("pawthWork")}
+          technologies={["Haml", "Tailwind CSS", "Ruby on Rails"]}
+          action={
+            <a
+              href="https://pawth-lp.hamltail.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-foreground transition-colors"
+              aria-label={t("pawthOpen")}
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M14 3h7v7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M10 14L21 3"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M21 21H3V3"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          }
+        />
+
+        <ProjectCard
+          title="Animal Corporation"
+          imageSrc="/images/projects-animal-corporation.webp"
+          imageAlt="Animal Corporation project thumbnail"
+          description={t("animalDescription")}
+          work={t("animalWork")}
+          technologies={["TypeScript", "React", "Next.js"]}
+        />
+
+        <ProjectCard
+          title="Animal Caffee"
+          imageSrc="/images/projects-animal-caffee.webp"
+          imageAlt="Animal Caffee project thumbnail"
+          description={t("caffeeDescription")}
+          work={t("caffeeWork")}
+          technologies={["Figma", "HTML / CSS", "JavaScript"]}
+          action={
+            <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
+              {t("comingSoon")}
+            </span>
+          }
+        />
+      </ProjectCarousel>
     </section>
   );
 }

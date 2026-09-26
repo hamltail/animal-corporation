@@ -19,33 +19,33 @@
     "label": "私たちについて",
     "leadFirst": "デザインとテクノロジーで、",
     "leadSecond": "より良い体験と未来を作る。",
-    "description": "Animal Corporationは、デザインとテクノロジーの力で、人の行動や社会の仕組みをより良い方向へ導く体験を設計するデザインスタジオです。ユーザーの気持ちに寄り添い、ビジネスの成長につながる本質的な価値を生み出します。",
+    "description": "Animal Corporationは、デザインとテクノロジーを使って、WebサイトやWebサービスをつくる小さな工房です。目的や運用に合わせて適切な技術を選び、実際に使いながら、品質とユーザー体験を継続的に改善していきます。",
     "humanCentered": "人を中心に考え、共感を軸に体験を設計します。",
-    "impactful": "ビジネスと社会に、継続的なインパクトを生み出します。",
-    "technologyDriven": "最新のテクノロジーを活用し、最適な解決策を実現します。",
+    "thoughtful": "目的や使う人に向き合い、丁寧につくります。",
+    "rightTechnology": "目的や運用に合わせて、最適なテクノロジーを選択します。",
     "simpleBeautiful": "シンプルで美しく、使いやすい体験を追求します。"
   },
   "Service": {
     "label": "事業内容",
-    "introFirst": "デザインからフロントエンド実装、情報設計まで。",
-    "introSecond": "ユーザー体験を重視したWebサイト制作を提供しています。",
-    "webDesign": "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
-    "uiUxDesign": "ユーザー中心の設計で、価値ある体験を設計します。",
-    "frontEndDevelopment": "パフォーマンスとメンテナンス性を重視した実装を行います。",
-    "informationArchitecture": "情報設計を整え、使いやすい構造を作ります。"
+    "introFirst": "デザインから開発、品質改善まで。",
+    "introSecond": "ユーザー体験を重視したWebサイト・Webサービスを提供しています。",
+    "webDesign": "ブランドや目的に合わせて、伝わりやすく魅力的なWebデザインをつくります。",
+    "uiUxDesign": "情報設計や導線を整え、わかりやすく使いやすい体験を設計します。",
+    "webDevelopment": "目的や運用に合わせて技術を選び、WebサイトやWebサービスを開発します。",
+    "qualityImprovement": "実際に使い、試しながら課題を見つけ、品質とユーザー体験を継続的に改善します。"
   },
   "Projects": {
     "label": "制作実績",
-    "introFirst": "デザインと技術を活かして制作した",
-    "introSecond": "Webサイトやアプリケーションの実績をご覧ください。",
+    "introFirst": "デザイン・開発・品質改善を通して取り組んだ",
+    "introSecond": "WebサイトやWebサービスをご紹介します。",
     "pawthOpen": "パウスのプロジェクトを開く",
     "pawthDescription": "日々の足あとを描く。小さな日記アプリ",
-    "pawthWork": "企画 / デザイン / 開発",
+    "pawthWork": "企画 / UI・UX / 開発 / 運用",
     "animalDescription": "コーポレートサイト制作（架空プロジェクト）",
-    "animalWork": "情報設計 / デザイン / フロントエンド",
+    "animalWork": "情報設計 / UI・UX / 開発 / 品質改善",
     "comingSoon": "準備中",
     "caffeeDescription": "アニマルカフェのサイトリニューアル（架空）",
-    "caffeeWork": "UI UXデザイン / コーディング / 写真・素材選定"
+    "caffeeWork": "情報設計 / Webデザイン / 写真・素材選定"
   },
   "Team": {
     "label": "メンバー",
@@ -89,7 +89,7 @@
   "Contact": {
     "label": "お問い合わせ",
     "title": "新しい体験を、一緒につくりませんか？",
-    "description": "サービス開発やWeb制作、デザインに関するご相談など、 お気軽にお問い合わせください。",
+    "description": "WebサイトやWebサービスの制作・改善について、お気軽にご相談ください。",
     "mailLabel": "メールでお問い合わせ",
     "button": "お問い合わせ"
   },
