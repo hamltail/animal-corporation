@@ -6,19 +6,19 @@ import Container from "@/components/Container";
 const members = [
   {
     id: "goro",
-    image: "/images/team-goro.png",
+    image: "/images/team-goro.webp",
   },
   {
     id: "ko",
-    image: "/images/team-ko.png",
+    image: "/images/team-ko.webp",
   },
   {
     id: "miu",
-    image: "/images/team-miu.png",
+    image: "/images/team-miu.webp",
   },
   {
     id: "ken",
-    image: "/images/team-ken.png",
+    image: "/images/team-ken.webp",
   },
 ] as const;
 
@@ -49,20 +49,20 @@ export default function Team() {
           {members.map((member) => (
             <article
               key={member.id}
-              className="team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl lg:min-h-90"
+              className="team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl"
             >
-              <div className="bg-surface-soft relative h-90 w-full md:h-75 lg:h-60">
+              <div className="bg-surface-soft relative aspect-square w-full overflow-hidden">
                 <Image
                   src={member.image}
                   alt={t(`${member.id}.name`)}
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-contain"
+                  className="object-cover"
                   draggable={false}
                 />
               </div>
 
-              <div className="flex flex-col p-5 md:p-6">
+              <div className="flex flex-1 flex-col p-5 md:p-6">
                 <p className="text-subtle text-xs font-medium">
                   {t(`${member.id}.role`)}
                 </p>
