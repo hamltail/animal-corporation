@@ -36,16 +36,16 @@
   },
   "Projects": {
     "label": "制作実績",
-    "introFirst": "デザインと技術を活かして制作した",
-    "introSecond": "Webサイトやアプリケーションの実績をご覧ください。",
+    "introFirst": "デザイン・開発・品質改善を通して取り組んだ",
+    "introSecond": "WebサイトやWebサービスをご紹介します。",
     "pawthOpen": "パウスのプロジェクトを開く",
     "pawthDescription": "日々の足あとを描く。小さな日記アプリ",
-    "pawthWork": "企画 / デザイン / 開発",
+    "pawthWork": "企画 / UI・UX / 開発 / 運用",
     "animalDescription": "コーポレートサイト制作（架空プロジェクト）",
-    "animalWork": "情報設計 / デザイン / フロントエンド",
+    "animalWork": "情報設計 / UI・UX / 開発 / 品質改善",
     "comingSoon": "準備中",
     "caffeeDescription": "アニマルカフェのサイトリニューアル（架空）",
-    "caffeeWork": "UI UXデザイン / コーディング / 写真・素材選定"
+    "caffeeWork": "情報設計 / Webデザイン / 写真・素材選定"
   },
   "Team": {
     "label": "メンバー",

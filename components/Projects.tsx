@@ -36,7 +36,7 @@ export default function Projects() {
             imageAlt="Pawth project thumbnail"
             description={t("pawthDescription")}
             work={t("pawthWork")}
-            technologies={["Haml", "Tailwind CSS", "Responsive"]}
+            technologies={["Haml", "Tailwind CSS", "Ruby on Rails"]}
             action={
               <a
                 href="https://pawth-lp.hamltail.dev/"
@@ -85,7 +85,7 @@ export default function Projects() {
             imageAlt="Animal Corporation project thumbnail"
             description={t("animalDescription")}
             work={t("animalWork")}
-            technologies={["Figma", "HTML / CSS", "Responsive"]}
+            technologies={["TypeScript", "React", "Next.js"]}
           />
 
           <ProjectCard
@@ -94,7 +94,7 @@ export default function Projects() {
             imageAlt="Animal Caffee project thumbnail"
             description={t("caffeeDescription")}
             work={t("caffeeWork")}
-            technologies={["Figma", "HTML / CSS", "Responsive"]}
+            technologies={["Figma", "HTML / CSS", "JavaScript"]}
             action={
               <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
                 {t("comingSoon")}

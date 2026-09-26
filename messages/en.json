@@ -36,16 +36,16 @@
   },
   "Projects": {
     "label": "Projects",
-    "introFirst": "Explore websites and applications",
-    "introSecond": "created with our design and technology expertise.",
+    "introFirst": "Projects shaped through design, development, and quality improvement.",
+    "introSecond": "Explore the websites and web services we've worked on.",
     "pawthOpen": "Open the Pawth project",
     "pawthDescription": "Trace your daily journey. A small journaling app.",
-    "pawthWork": "Planning / Design / Development",
+    "pawthWork": "Planning / UI & UX / Development / Operation",
     "animalDescription": "Corporate website development (fictional project)",
-    "animalWork": "Information Architecture / Design / Front-end",
+    "animalWork": "Information Architecture / UI & UX / Development / Quality Improvement",
     "comingSoon": "Coming Soon",
     "caffeeDescription": "Animal Caffee website redesign (fictional project)",
-    "caffeeWork": "UI/UX Design / Coding / Photography & Asset Selection"
+    "caffeeWork": "Information Architecture / Web Design / Photography & Asset Selection"
   },
   "Team": {
     "label": "Team",
