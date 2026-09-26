@@ -16,14 +16,17 @@ const members = [
   {
     id: "ko",
     image: "/images/team-ko.webp",
+    casualImage: "/images/team-ko-casual.webp",
   },
   {
     id: "miu",
     image: "/images/team-miu.webp",
+    casualImage: "/images/team-miu-casual.webp",
   },
   {
     id: "ken",
     image: "/images/team-ken.webp",
+    casualImage: "/images/team-ken-casual.webp",
   },
 ] as const;
 
