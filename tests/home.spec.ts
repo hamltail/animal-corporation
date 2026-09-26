@@ -60,7 +60,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
 
   await expect(
     about.getByText(
-      "Animal Corporationは、デザインとテクノロジーの力で、人の行動や社会の仕組みをより良い方向へ導く体験を設計するデザインスタジオです。ユーザーの気持ちに寄り添い、ビジネスの成長につながる本質的な価値を生み出します。",
+      "Animal Corporationは、デザインとテクノロジーを使って、WebサイトやWebサービスをつくる小さな工房です。目的や運用に合わせて適切な技術を選び、実際に使いながら、品質とユーザー体験を継続的に改善していきます。",
       { exact: true },
     ),
   ).toBeVisible();
@@ -71,12 +71,12 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
       text: "人を中心に考え、共感を軸に体験を設計します。",
     },
     {
-      title: "Impactful",
-      text: "ビジネスと社会に、継続的なインパクトを生み出します。",
+      title: "Thoughtful",
+      text: "目的や使う人に向き合い、丁寧につくります。",
     },
     {
-      title: "Technology Driven",
-      text: "最新のテクノロジーを活用し、最適な解決策を実現します。",
+      title: "Right Technology",
+      text: "目的や運用に合わせて、最適なテクノロジーを選択します。",
     },
     {
       title: "Simple & Beautiful",
@@ -112,25 +112,25 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   const serviceDescription = service.locator("p").first();
 
   await expect(serviceDescription).toHaveText(
-    "デザインからフロントエンド実装、情報設計まで。ユーザー体験を重視したWebサイト制作を提供しています。",
+    "デザインから開発、品質改善まで。ユーザー体験を重視したWebサイト・Webサービスを提供しています。",
   );
 
   const services = [
     {
       title: "Web Design",
-      text: "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
+      text: "ブランドや目的に合わせて、伝わりやすく魅力的なWebデザインをつくります。",
     },
     {
       title: "UI / UX Design",
-      text: "ユーザー中心の設計で、価値ある体験を設計します。",
+      text: "情報設計や導線を整え、わかりやすく使いやすい体験を設計します。",
     },
     {
-      title: "Front-end Development",
-      text: "パフォーマンスとメンテナンス性を重視した実装を行います。",
+      title: "Web Development",
+      text: "目的や運用に合わせて技術を選び、WebサイトやWebサービスを開発します。",
     },
     {
-      title: "Information Architecture",
-      text: "情報設計を整え、使いやすい構造を作ります。",
+      title: "Quality & Improvement",
+      text: "実際に使い、試しながら課題を見つけ、品質とユーザー体験を継続的に改善します。",
     },
   ];
 
@@ -162,7 +162,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   const projectsDescription = projects.locator("p").first();
 
   await expect(projectsDescription).toHaveText(
-    "デザインと技術を活かして制作したWebサイトやアプリケーションの実績をご覧ください。",
+    "デザイン・開発・品質改善を通して取り組んだWebサイトやWebサービスをご紹介します。",
   );
 
   await expect(
@@ -179,7 +179,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   ).toBeVisible();
 
   await expect(
-    projects.getByText("企画 / デザイン / 開発", {
+    projects.getByText("企画 / UI・UX / 開発 / 運用", {
       exact: true,
     }),
   ).toBeVisible();
@@ -204,7 +204,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   ).toBeVisible();
 
   await expect(
-    projects.getByText("情報設計 / デザイン / フロントエンド", {
+    projects.getByText("情報設計 / UI・UX / 開発 / 品質改善", {
       exact: true,
     }),
   ).toBeVisible();
@@ -225,7 +225,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   ).toBeVisible();
 
   await expect(
-    projects.getByText("UI UXデザイン / コーディング / 写真・素材選定", {
+    projects.getByText("情報設計 / Webデザイン / 写真・素材選定", {
       exact: true,
     }),
   ).toBeVisible();
@@ -377,7 +377,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
 
   await expect(
     contact.getByText(
-      "サービス開発やWeb制作、デザインに関するご相談など、 お気軽にお問い合わせください。",
+      "WebサイトやWebサービスの制作・改善について、お気軽にご相談ください。",
       { exact: true },
     ),
   ).toBeVisible();
