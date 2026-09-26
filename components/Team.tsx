@@ -37,10 +37,29 @@ export default function Team() {
   const [selectedMemberId, setSelectedMemberId] = useState<MemberId | null>(
     null,
   );
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const selectedMember = members.find(
     (member) => member.id === selectedMemberId && "casualImage" in member,
   );
+
+  const openModal = (memberId: MemberId) => {
+    setSelectedMemberId(memberId);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setIsModalVisible(true);
+      });
+    });
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+
+    window.setTimeout(() => {
+      setSelectedMemberId(null);
+    }, 300);
+  };
 
   useEffect(() => {
     if (!selectedMember) {
@@ -49,7 +68,7 @@ export default function Team() {
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setSelectedMemberId(null);
+        closeModal();
       }
     };
 
@@ -65,14 +84,20 @@ export default function Team() {
     "casualImage" in selectedMember &&
     createPortal(
       <div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm md:p-8"
+        className={`fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-colors duration-300 md:p-8 ${
+          isModalVisible ? "bg-black/80" : "bg-black/0"
+        }`}
         role="dialog"
         aria-modal="true"
         aria-label={t(`${selectedMember.id}.name`)}
-        onClick={() => setSelectedMemberId(null)}
+        onClick={closeModal}
       >
         <div
-          className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+          className={`relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl transition-all duration-300 ease-out ${
+            isModalVisible
+              ? "translate-y-0 scale-100 opacity-100"
+              : "translate-y-2 scale-[0.98] opacity-0"
+          }`}
           onClick={(event) => event.stopPropagation()}
         >
           <div className="relative aspect-video w-full">
@@ -88,7 +113,7 @@ export default function Team() {
 
           <button
             type="button"
-            onClick={() => setSelectedMemberId(null)}
+            onClick={closeModal}
             className="absolute top-3 right-3 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:top-4 md:right-4"
             aria-label="閉じる"
           >
@@ -143,7 +168,7 @@ export default function Team() {
                   }`}
                   onClick={() => {
                     if (hasCasualImage) {
-                      setSelectedMemberId(member.id);
+                      openModal(member.id);
                     }
                   }}
                   onKeyDown={(event) => {
@@ -152,7 +177,7 @@ export default function Team() {
                       (event.key === "Enter" || event.key === " ")
                     ) {
                       event.preventDefault();
-                      setSelectedMemberId(member.id);
+                      openModal(member.id);
                     }
                   }}
                   role={hasCasualImage ? "button" : undefined}
