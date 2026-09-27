@@ -23,25 +23,27 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-150 items-center overflow-hidden md:min-h-175 lg:min-h-200">
       {selectedMemberId && (
-        <div
-          className="pointer-events-none absolute right-[-8%] bottom-[4%] z-0 h-[38%] w-[72%] opacity-30 md:right-0 md:bottom-[8%] md:h-[42%] md:w-[52%] md:opacity-35 lg:h-[48%] lg:w-[48%]"
-          style={{
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
-          }}
-          aria-hidden="true"
-        >
-          <Image
-            key={selectedMemberId}
-            src={casualImages[selectedMemberId]}
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 48vw, (min-width: 768px) 52vw, 72vw"
-            className="object-cover object-center"
-            priority
-          />
+        <div className="pointer-events-none absolute inset-0 z-0 2xl:left-1/2 2xl:w-full 2xl:max-w-[1600px] 2xl:-translate-x-1/2">
+          <div
+            className="absolute right-[-8%] bottom-[4%] h-[38%] w-[72%] opacity-30 md:right-0 md:bottom-[8%] md:h-[42%] md:w-[52%] md:opacity-35 lg:h-[27vw] lg:w-[48%] 2xl:h-[432px] 2xl:w-[768px]"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
+            }}
+            aria-hidden="true"
+          >
+            <Image
+              key={selectedMemberId}
+              src={casualImages[selectedMemberId]}
+              alt=""
+              fill
+              sizes="(min-width: 1536px) 768px, (min-width: 1024px) 48vw, (min-width: 768px) 52vw, 72vw"
+              className="object-cover object-center"
+              priority
+            />
+          </div>
         </div>
       )}
 
