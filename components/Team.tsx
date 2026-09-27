@@ -63,7 +63,7 @@ export default function Team() {
 
     window.setTimeout(() => {
       setModalMemberId(null);
-    }, 300);
+    }, 200);
   };
 
   useEffect(() => {
@@ -88,16 +88,14 @@ export default function Team() {
     selectedMember &&
     createPortal(
       <div
-        className={`fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-colors duration-300 md:p-8 ${
-          isModalVisible ? "bg-black/80" : "bg-black/0"
-        }`}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm md:p-8"
         role="dialog"
         aria-modal="true"
         aria-label={t(`${selectedMember.id}.name`)}
         onClick={closeModal}
       >
         <div
-          className={`relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl transition-all duration-300 ease-out ${
+          className={`relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl transition-all duration-200 ease-out ${
             isModalVisible
               ? "translate-y-0 scale-100 opacity-100"
               : "translate-y-2 scale-[0.98] opacity-0"
