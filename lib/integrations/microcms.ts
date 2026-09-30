@@ -25,7 +25,7 @@ export const getNewsFromMicroCMS: NewsFetcher = async ({ limit, offset }) => {
     queries: {
       limit,
       offset,
-      orders: "-publishedAt",
+      orders: "-publishedDate",
     },
   });
 };

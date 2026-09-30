@@ -9,10 +9,11 @@ const news = [
     revisedAt: "2026-07-01T00:00:00.000Z",
     title: "Animal Caffee をオープンしました。",
     content:
-      "動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。",
+      "<p>動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。</p>",
     category: {
       name: "お知らせ",
     },
+    publishedDate: "2026-07-01T00:00:00.000Z",
   },
   {
     id: "new-member",
@@ -21,10 +22,11 @@ const news = [
     publishedAt: "2026-06-01T00:00:00.000Z",
     revisedAt: "2026-06-01T00:00:00.000Z",
     title: "新メンバーが参加しました。",
-    content: "Design Technologist として柴田ケンが加わりました。",
+    content: "<p>Design Technologist として柴田ケンが加わりました。</p>",
     category: {
       name: "お知らせ",
     },
+    publishedDate: "2026-06-01T00:00:00.000Z",
   },
   {
     id: "company-established",
@@ -34,10 +36,11 @@ const news = [
     revisedAt: "2026-04-01T00:00:00.000Z",
     title: "Animal Corporation を設立しました。",
     content:
-      "デザインとテクノロジーで、より良い体験を届けるために設立しました。",
+      "<p>デザインとテクノロジーで、より良い体験を届けるために設立しました。</p>",
     category: {
       name: "お知らせ",
     },
+    publishedDate: "2026-04-01T00:00:00.000Z",
   },
 ];
 

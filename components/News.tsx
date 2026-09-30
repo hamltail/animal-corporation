@@ -9,12 +9,28 @@ type NewsProps = {
   newsList: (NewsContent & MicroCMSListContent)[];
 };
 
-function formatPublishedDate(publishedAt: string) {
-  const date = publishedAt.slice(0, 10);
+function formatPublishedDate(publishedDate: string) {
+  const date = new Date(publishedDate);
+
+  const dateTime = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+
+  const label = new Intl.DateTimeFormat("ja-JP", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  })
+    .format(date)
+    .replaceAll("/", ".");
 
   return {
-    dateTime: date,
-    label: date.replaceAll("-", "."),
+    dateTime,
+    label,
   };
 }
 
@@ -39,9 +55,7 @@ export default function News({ newsList }: NewsProps) {
 
         <div className="mt-12 px-0 lg:px-16">
           {newsList.map((news, index) => {
-            const publishedDate = news.publishedAt
-              ? formatPublishedDate(news.publishedAt)
-              : null;
+            const publishedDate = formatPublishedDate(news.publishedDate);
 
             const isLatest = index === 0;
             const isLast = index === newsList.length - 1;
@@ -54,14 +68,12 @@ export default function News({ newsList }: NewsProps) {
                 }`}
               >
                 <div className="md:min-w-25">
-                  {publishedDate && (
-                    <time
-                      dateTime={publishedDate.dateTime}
-                      className="text-muted text-sm"
-                    >
-                      {publishedDate.label}
-                    </time>
-                  )}
+                  <time
+                    dateTime={publishedDate.dateTime}
+                    className="text-muted text-sm"
+                  >
+                    {publishedDate.label}
+                  </time>
                 </div>
 
                 <div className="flex-1">
@@ -75,9 +87,10 @@ export default function News({ newsList }: NewsProps) {
                     )}
                   </p>
 
-                  <p className="text-muted mt-3 text-base leading-[1.8]">
-                    {news.content}
-                  </p>
+                  <div
+                    className="text-muted mt-3 text-base leading-[1.8]"
+                    dangerouslySetInnerHTML={{ __html: news.content }}
+                  />
                 </div>
               </article>
             );
