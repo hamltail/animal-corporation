@@ -1,3 +1,6 @@
+import { newsFetcher } from "@/lib/news/dependencies";
+import { getNews } from "@/lib/news/news";
+
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import FadeIn from "@/components/FadeIn";
@@ -9,7 +12,14 @@ import Service from "@/components/Service";
 import Team from "@/components/Team";
 import TeamSelectionProvider from "@/components/TeamSelectionProvider";
 
-export default function Home() {
+const NEWS_LIMIT = 3;
+
+export default async function Home() {
+  const response = await getNews(newsFetcher, {
+    limit: NEWS_LIMIT,
+    offset: 0,
+  });
+
   return (
     <TeamSelectionProvider>
       <Hero />
@@ -31,7 +41,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <News />
+        <News newsList={response.contents} />
       </FadeIn>
 
       <FadeIn>

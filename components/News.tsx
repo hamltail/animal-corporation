@@ -1,8 +1,24 @@
+import type { MicroCMSListContent } from "microcms-js-sdk";
 import { useTranslations } from "next-intl";
+
+import type { News as NewsContent } from "@/lib/news/news.types";
 
 import Container from "@/components/Container";
 
-export default function News() {
+type NewsProps = {
+  newsList: (NewsContent & MicroCMSListContent)[];
+};
+
+function formatPublishedDate(publishedAt: string) {
+  const date = publishedAt.slice(0, 10);
+
+  return {
+    dateTime: date,
+    label: date.replaceAll("-", "."),
+  };
+}
+
+export default function News({ newsList }: NewsProps) {
   const t = useTranslations("News");
 
   return (
@@ -22,69 +38,50 @@ export default function News() {
         </div>
 
         <div className="mt-12 px-0 lg:px-16">
-          <article className="news-item border-border mb-8 flex flex-col gap-3 border-b pb-8 md:flex-row md:gap-8">
-            <div className="md:min-w-25">
-              <time dateTime="2026-07-01" className="text-muted text-sm">
-                2026.07.01
-              </time>
-            </div>
+          {newsList.map((news, index) => {
+            const publishedDate = news.publishedAt
+              ? formatPublishedDate(news.publishedAt)
+              : null;
 
-            <div className="flex-1">
-              <p className="news-item-title text-lg font-bold">
-                <span className="news-item-title-text">
-                  {t("caffee.title")}
-                </span>
+            const isLatest = index === 0;
+            const isLast = index === newsList.length - 1;
 
-                <span className="bg-primary text-primary-foreground ml-3 inline-block rounded-full px-3 py-1 text-xs">
-                  New
-                </span>
-              </p>
+            return (
+              <article
+                key={news.id}
+                className={`news-item flex flex-col gap-3 md:flex-row md:gap-8 ${
+                  isLast ? "" : "border-border mb-8 border-b pb-8"
+                }`}
+              >
+                <div className="md:min-w-25">
+                  {publishedDate && (
+                    <time
+                      dateTime={publishedDate.dateTime}
+                      className="text-muted text-sm"
+                    >
+                      {publishedDate.label}
+                    </time>
+                  )}
+                </div>
 
-              <p className="text-muted mt-3 text-base leading-[1.8]">
-                {t("caffee.description")}
-              </p>
-            </div>
-          </article>
+                <div className="flex-1">
+                  <p className="news-item-title text-lg font-bold">
+                    <span className="news-item-title-text">{news.title}</span>
 
-          <article className="news-item border-border mb-8 flex flex-col gap-3 border-b pb-8 md:flex-row md:gap-8">
-            <div className="md:min-w-25">
-              <time dateTime="2026-06-01" className="text-muted text-sm">
-                2026.06.01
-              </time>
-            </div>
+                    {isLatest && (
+                      <span className="bg-primary text-primary-foreground ml-3 inline-block rounded-full px-3 py-1 text-xs">
+                        New
+                      </span>
+                    )}
+                  </p>
 
-            <div className="flex-1">
-              <p className="news-item-title text-lg font-bold">
-                <span className="news-item-title-text">
-                  {t("member.title")}
-                </span>
-              </p>
-
-              <p className="text-muted mt-3 text-base leading-[1.8]">
-                {t("member.description")}
-              </p>
-            </div>
-          </article>
-
-          <article className="news-item flex flex-col gap-3 md:flex-row md:gap-8">
-            <div className="md:min-w-25">
-              <time dateTime="2026-04-01" className="text-muted text-sm">
-                2026.04.01
-              </time>
-            </div>
-
-            <div className="flex-1">
-              <p className="news-item-title text-lg font-bold">
-                <span className="news-item-title-text">
-                  {t("company.title")}
-                </span>
-              </p>
-
-              <p className="text-muted mt-3 text-base leading-[1.8]">
-                {t("company.description")}
-              </p>
-            </div>
-          </article>
+                  <p className="text-muted mt-3 text-base leading-[1.8]">
+                    {news.content}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </Container>
     </section>
