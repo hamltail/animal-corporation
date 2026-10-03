@@ -45,7 +45,9 @@
     "animalWork": "Information Architecture / UI & UX / Development / Quality Improvement",
     "comingSoon": "Coming Soon",
     "caffeeDescription": "Animal Caffee website redesign (fictional project)",
-    "caffeeWork": "Information Architecture / Web Design / Photography & Asset Selection"
+    "caffeeWork": "Information Architecture / Web Design / Photography & Asset Selection",
+    "previousProject": "Show previous project",
+    "nextProject": "Show next project"
   },
   "Team": {
     "label": "Team",

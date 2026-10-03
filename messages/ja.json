@@ -45,7 +45,9 @@
     "animalWork": "情報設計 / UI・UX / 開発 / 品質改善",
     "comingSoon": "準備中",
     "caffeeDescription": "アニマルカフェのサイトリニューアル（架空）",
-    "caffeeWork": "情報設計 / Webデザイン / 写真・素材選定"
+    "caffeeWork": "情報設計 / Webデザイン / 写真・素材選定",
+    "previousProject": "前のプロジェクトを表示",
+    "nextProject": "次のプロジェクトを表示"
   },
   "Team": {
     "label": "メンバー",

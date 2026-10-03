@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Children, type ReactNode, useRef, useState } from "react";
 
 type ProjectCarouselProps = {
@@ -9,6 +10,7 @@ type ProjectCarouselProps = {
 const SWIPE_THRESHOLD = 50;
 
 export default function ProjectCarousel({ children }: ProjectCarouselProps) {
+  const t = useTranslations("Projects");
   const projects = Children.toArray(children);
   const [activeIndex, setActiveIndex] = useState(0);
   const pointerStartX = useRef<number | null>(null);
@@ -96,7 +98,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
           type="button"
           onClick={showPrevious}
           className="bg-surface/80 text-foreground absolute top-1/2 left-2 z-30 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface sm:left-4 sm:size-12"
-          aria-label="前のプロジェクトを表示"
+          aria-label={t("previousProject")}
         >
           <svg
             width="24"
@@ -117,7 +119,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
           type="button"
           onClick={showNext}
           className="bg-surface/80 text-foreground absolute top-1/2 right-2 z-30 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface sm:right-4 sm:size-12"
-          aria-label="次のプロジェクトを表示"
+          aria-label={t("nextProject")}
         >
           <svg
             width="24"

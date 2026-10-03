@@ -31,6 +31,19 @@ test.describe("English locale", () => {
     await expect(page.locator("#contact")).toContainText("Contact");
     await expect(page.locator("#recruit")).toContainText("Careers");
 
+    // Projects
+    await expect(
+      page.getByRole("button", {
+        name: "Show previous project",
+      }),
+    ).toBeVisible();
+
+    await expect(
+      page.getByRole("button", {
+        name: "Show next project",
+      }),
+    ).toBeVisible();
+
     // Contact
     await expect(
       page.getByRole("link", {
