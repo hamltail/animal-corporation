@@ -7,6 +7,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-surface-soft">
@@ -51,7 +52,7 @@ export default function Footer() {
           <LanguageSwitcher />
         </div>
 
-        <p className="text-muted text-xs">© 2026 Animal Corporation</p>
+        <p className="text-muted text-xs">© {currentYear} Animal Corporation</p>
       </Container>
     </footer>
   );

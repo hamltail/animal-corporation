@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+const currentYear = new Date().getFullYear();
+
 test.describe("English locale", () => {
   test("ブラウザ言語が英語の場合は主要コンテンツを英語で表示する", async ({
     page,
@@ -47,7 +49,7 @@ test.describe("English locale", () => {
     const footer = page.locator("footer");
 
     await expect(
-      footer.getByText("© 2026 Animal Corporation", {
+      footer.getByText(`© ${currentYear} Animal Corporation`, {
         exact: true,
       }),
     ).toBeVisible();
