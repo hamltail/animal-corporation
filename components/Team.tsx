@@ -117,7 +117,7 @@ export default function Team() {
             type="button"
             onClick={closeModal}
             className="absolute top-3 right-3 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition-transform hover:scale-105 md:top-4 md:right-4"
-            aria-label="閉じる"
+            aria-label={t("closeModal")}
           >
             <svg
               viewBox="0 0 24 24"
@@ -168,7 +168,9 @@ export default function Team() {
                   type="button"
                   className="flex h-full w-full cursor-pointer flex-col text-left"
                   onClick={() => openModal(member.id)}
-                  aria-label={`${t(`${member.id}.name`)}の休日画像を表示`}
+                  aria-label={t("openCasualImage", {
+                    name: t(`${member.id}.name`),
+                  })}
                 >
                   <div className="bg-surface-soft relative aspect-square w-full overflow-hidden">
                     <Image

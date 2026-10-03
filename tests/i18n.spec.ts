@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+const currentYear = new Date().getFullYear();
+
 test.describe("English locale", () => {
   test("ブラウザ言語が英語の場合は主要コンテンツを英語で表示する", async ({
     page,
@@ -29,6 +31,46 @@ test.describe("English locale", () => {
     await expect(page.locator("#contact")).toContainText("Contact");
     await expect(page.locator("#recruit")).toContainText("Careers");
 
+    // Projects
+    await expect(
+      page.getByRole("button", {
+        name: "Show previous project",
+      }),
+    ).toBeVisible();
+
+    await expect(
+      page.getByRole("button", {
+        name: "Show next project",
+      }),
+    ).toBeVisible();
+
+    // Team
+    const team = page.locator("#team");
+
+    const goroButton = team.getByRole("button", {
+      name: "Show a casual photo of Goro Kuromori",
+    });
+
+    await expect(goroButton).toBeVisible();
+
+    await goroButton.click();
+
+    const dialog = page.getByRole("dialog", {
+      name: "Goro Kuromori",
+    });
+
+    await expect(dialog).toBeVisible();
+
+    const closeButton = dialog.getByRole("button", {
+      name: "Close",
+    });
+
+    await expect(closeButton).toBeVisible();
+
+    await closeButton.click();
+
+    await expect(dialog).not.toBeVisible();
+
     // Contact
     await expect(
       page.getByRole("link", {
@@ -47,7 +89,7 @@ test.describe("English locale", () => {
     const footer = page.locator("footer");
 
     await expect(
-      footer.getByText("© 2026 Animal Corporation", {
+      footer.getByText(`© ${currentYear} Animal Corporation`, {
         exact: true,
       }),
     ).toBeVisible();

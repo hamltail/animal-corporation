@@ -12,6 +12,25 @@ export default function Header() {
   const t = useTranslations("Header");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navItems = [
+    {
+      href: "#about",
+      label: t("about"),
+    },
+    {
+      href: "#news",
+      label: t("news"),
+    },
+    {
+      href: "#contact",
+      label: t("contact"),
+    },
+    {
+      href: "#recruit",
+      label: t("recruit"),
+    },
+  ] as const;
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -22,7 +41,7 @@ export default function Header() {
         <Link href="/" className="flex shrink-0 items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
-            alt="Animal Corporation Logo"
+            alt=""
             className="company-logo size-8 object-contain"
             width={32}
             height={32}
@@ -39,29 +58,13 @@ export default function Header() {
             className="hidden shrink-0 md:block"
           >
             <ul className="text-muted flex items-center gap-8 whitespace-nowrap text-sm font-medium">
-              <li>
-                <a href="#about" className="nav-link">
-                  {t("about")}
-                </a>
-              </li>
-
-              <li>
-                <a href="#news" className="nav-link">
-                  {t("news")}
-                </a>
-              </li>
-
-              <li>
-                <a href="#contact" className="nav-link">
-                  {t("contact")}
-                </a>
-              </li>
-
-              <li>
-                <a href="#recruit" className="nav-link">
-                  {t("recruit")}
-                </a>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} className="nav-link">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -98,6 +101,7 @@ export default function Header() {
         id="mobile-menu"
         aria-label={t("mobileNavigation")}
         aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen}
         className={`bg-surface absolute inset-x-7 top-20 rounded-b-2xl px-4 py-4 shadow-xl transition-opacity duration-300 ease-out md:hidden ${
           isMenuOpen
             ? "pointer-events-auto opacity-100"
@@ -105,29 +109,13 @@ export default function Header() {
         }`}
       >
         <ul className="text-muted flex flex-col gap-4 text-base font-medium">
-          <li>
-            <a href="#about" className="nav-link" onClick={closeMenu}>
-              {t("about")}
-            </a>
-          </li>
-
-          <li>
-            <a href="#news" className="nav-link" onClick={closeMenu}>
-              {t("news")}
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact" className="nav-link" onClick={closeMenu}>
-              {t("contact")}
-            </a>
-          </li>
-
-          <li>
-            <a href="#recruit" className="nav-link" onClick={closeMenu}>
-              {t("recruit")}
-            </a>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <a href={item.href} className="nav-link" onClick={closeMenu}>
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

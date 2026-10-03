@@ -9,8 +9,6 @@ jobs:
 
     env:
       E2E_TEST: "true"
-      MICROCMS_SERVICE_DOMAIN: dummy
-      MICROCMS_API_KEY: dummy
 
     steps:
       - name: Checkout repository
@@ -39,6 +37,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Unit test
+        run: npm run test:unit
 
       - name: E2E test
         run: npm run test:e2e

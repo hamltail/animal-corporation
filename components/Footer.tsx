@@ -7,6 +7,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-surface-soft">
@@ -14,7 +15,7 @@ export default function Footer() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
-            alt="Animal Corporation Logo"
+            alt=""
             width={32}
             height={32}
             className="company-logo size-8 object-contain"
@@ -51,7 +52,7 @@ export default function Footer() {
           <LanguageSwitcher />
         </div>
 
-        <p className="text-muted text-xs">© 2026 Animal Corporation</p>
+        <p className="text-muted text-xs">© {currentYear} Animal Corporation</p>
       </Container>
     </footer>
   );

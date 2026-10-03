@@ -45,11 +45,15 @@
     "animalWork": "Information Architecture / UI & UX / Development / Quality Improvement",
     "comingSoon": "Coming Soon",
     "caffeeDescription": "Animal Caffee website redesign (fictional project)",
-    "caffeeWork": "Information Architecture / Web Design / Photography & Asset Selection"
+    "caffeeWork": "Information Architecture / Web Design / Photography & Asset Selection",
+    "previousProject": "Show previous project",
+    "nextProject": "Show next project"
   },
   "Team": {
     "label": "Team",
     "intro": "Meet the animal members, each bringing their own area of expertise.",
+    "openCasualImage": "Show a casual photo of {name}",
+    "closeModal": "Close",
     "goro": {
       "name": "Goro Kuromori",
       "role": "President & CEO",
@@ -72,19 +76,7 @@
     }
   },
   "News": {
-    "label": "News",
-    "caffee": {
-      "title": "Animal Caffee is now open.",
-      "description": "We launched Animal Caffee as a new community space where animals can gather."
-    },
-    "member": {
-      "title": "A new member has joined our team.",
-      "description": "Ken Shibata has joined us as a Design Technologist."
-    },
-    "company": {
-      "title": "Animal Corporation has been established.",
-      "description": "We established Animal Corporation to create better experiences through design and technology."
-    }
+    "label": "News"
   },
   "Contact": {
     "label": "Contact",
@@ -109,6 +101,9 @@
     "about": "About",
     "news": "News",
     "contact": "Contact"
+  },
+  "LanguageSwitcher": {
+    "label": "Language switcher"
   },
   "ThemeSwitcher": {
     "light": "Light theme",

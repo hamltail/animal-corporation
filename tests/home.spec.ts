@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+const currentYear = new Date().getFullYear();
+
 test("Animal Corporationの主要コンテンツが正しく表示される", async ({
   page,
 }) => {
@@ -440,7 +442,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   ).toBeVisible();
 
   await expect(
-    footer.getByText("© 2026 Animal Corporation", {
+    footer.getByText(`© ${currentYear} Animal Corporation`, {
       exact: true,
     }),
   ).toBeVisible();

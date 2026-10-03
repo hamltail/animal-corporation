@@ -45,11 +45,15 @@
     "animalWork": "情報設計 / UI・UX / 開発 / 品質改善",
     "comingSoon": "準備中",
     "caffeeDescription": "アニマルカフェのサイトリニューアル（架空）",
-    "caffeeWork": "情報設計 / Webデザイン / 写真・素材選定"
+    "caffeeWork": "情報設計 / Webデザイン / 写真・素材選定",
+    "previousProject": "前のプロジェクトを表示",
+    "nextProject": "次のプロジェクトを表示"
   },
   "Team": {
     "label": "メンバー",
     "intro": "それぞれの専門性を持つアニマルメンバーをご紹介します。",
+    "openCasualImage": "{name}の休日画像を表示",
+    "closeModal": "閉じる",
     "goro": {
       "name": "黒森 ゴロウ",
       "role": "代表取締役社長 / CEO",
@@ -72,19 +76,7 @@
     }
   },
   "News": {
-    "label": "お知らせ",
-    "caffee": {
-      "title": "Animal Caffee をオープンしました。",
-      "description": "動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。"
-    },
-    "member": {
-      "title": "新メンバーが参加しました。",
-      "description": "Design Technologist として柴田ケンが加わりました。"
-    },
-    "company": {
-      "title": "Animal Corporation を設立しました。",
-      "description": "デザインとテクノロジーで、より良い体験を届けるために設立しました。"
-    }
+    "label": "お知らせ"
   },
   "Contact": {
     "label": "お問い合わせ",
@@ -109,6 +101,9 @@
     "about": "私たちについて",
     "news": "お知らせ",
     "contact": "お問い合わせ"
+  },
+  "LanguageSwitcher": {
+    "label": "言語切り替え"
   },
   "ThemeSwitcher": {
     "light": "ライトテーマ",
