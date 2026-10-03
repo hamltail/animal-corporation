@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
@@ -18,6 +18,7 @@ const locales = [
 ] as const;
 
 export default function LanguageSwitcher() {
+  const t = useTranslations("LanguageSwitcher");
   const locale = useLocale();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -36,7 +37,7 @@ export default function LanguageSwitcher() {
   return (
     <div
       role="group"
-      aria-label="Language"
+      aria-label={t("label")}
       className="text-muted flex items-center gap-3 text-xs"
     >
       {locales.map(({ value, label }) => {

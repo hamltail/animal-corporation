@@ -114,6 +114,9 @@
     "news": "News",
     "contact": "Contact"
   },
+  "LanguageSwitcher": {
+    "label": "Language switcher"
+  },
   "ThemeSwitcher": {
     "light": "Light theme",
     "dark": "Dark theme",

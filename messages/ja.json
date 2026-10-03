@@ -114,6 +114,9 @@
     "news": "お知らせ",
     "contact": "お問い合わせ"
   },
+  "LanguageSwitcher": {
+    "label": "言語切り替え"
+  },
   "ThemeSwitcher": {
     "light": "ライトテーマ",
     "dark": "ダークテーマ",
