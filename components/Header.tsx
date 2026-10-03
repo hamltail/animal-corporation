@@ -98,6 +98,7 @@ export default function Header() {
         id="mobile-menu"
         aria-label={t("mobileNavigation")}
         aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen}
         className={`bg-surface absolute inset-x-7 top-20 rounded-b-2xl px-4 py-4 shadow-xl transition-opacity duration-300 ease-out md:hidden ${
           isMenuOpen
             ? "pointer-events-auto opacity-100"
