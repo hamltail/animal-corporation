@@ -76,19 +76,7 @@
     }
   },
   "News": {
-    "label": "お知らせ",
-    "caffee": {
-      "title": "Animal Caffee をオープンしました。",
-      "description": "動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。"
-    },
-    "member": {
-      "title": "新メンバーが参加しました。",
-      "description": "Design Technologist として柴田ケンが加わりました。"
-    },
-    "company": {
-      "title": "Animal Corporation を設立しました。",
-      "description": "デザインとテクノロジーで、より良い体験を届けるために設立しました。"
-    }
+    "label": "お知らせ"
   },
   "Contact": {
     "label": "お問い合わせ",
