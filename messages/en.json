@@ -52,6 +52,8 @@
   "Team": {
     "label": "Team",
     "intro": "Meet the animal members, each bringing their own area of expertise.",
+    "openCasualImage": "Show a casual photo of {name}",
+    "closeModal": "Close",
     "goro": {
       "name": "Goro Kuromori",
       "role": "President & CEO",

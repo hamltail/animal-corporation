@@ -52,6 +52,8 @@
   "Team": {
     "label": "メンバー",
     "intro": "それぞれの専門性を持つアニマルメンバーをご紹介します。",
+    "openCasualImage": "{name}の休日画像を表示",
+    "closeModal": "閉じる",
     "goro": {
       "name": "黒森 ゴロウ",
       "role": "代表取締役社長 / CEO",

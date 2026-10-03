@@ -44,6 +44,33 @@ test.describe("English locale", () => {
       }),
     ).toBeVisible();
 
+    // Team
+    const team = page.locator("#team");
+
+    const goroButton = team.getByRole("button", {
+      name: "Show a casual photo of Goro Kuromori",
+    });
+
+    await expect(goroButton).toBeVisible();
+
+    await goroButton.click();
+
+    const dialog = page.getByRole("dialog", {
+      name: "Goro Kuromori",
+    });
+
+    await expect(dialog).toBeVisible();
+
+    const closeButton = dialog.getByRole("button", {
+      name: "Close",
+    });
+
+    await expect(closeButton).toBeVisible();
+
+    await closeButton.click();
+
+    await expect(dialog).not.toBeVisible();
+
     // Contact
     await expect(
       page.getByRole("link", {
