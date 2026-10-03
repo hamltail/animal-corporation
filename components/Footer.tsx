@@ -14,7 +14,7 @@ export default function Footer() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
-            alt="Animal Corporation Logo"
+            alt=""
             width={32}
             height={32}
             className="company-logo size-8 object-contain"

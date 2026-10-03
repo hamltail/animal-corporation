@@ -41,7 +41,7 @@ export default function Header() {
         <Link href="/" className="flex shrink-0 items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
-            alt="Animal Corporation Logo"
+            alt=""
             className="company-logo size-8 object-contain"
             width={32}
             height={32}
