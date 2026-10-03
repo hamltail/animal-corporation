@@ -9,8 +9,6 @@ jobs:
 
     env:
       E2E_TEST: "true"
-      MICROCMS_SERVICE_DOMAIN: dummy
-      MICROCMS_API_KEY: dummy
 
     steps:
       - name: Checkout repository
