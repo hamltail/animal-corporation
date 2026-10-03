@@ -2,10 +2,7 @@
 
 架空のデザイン・テクノロジー企業「Animal Corporation」をテーマに制作した、コーポレートサイトのデモプロジェクトです。
 
-デザインとテクノロジーを使って、分かりやすく使いやすいWebサイトを目指して制作しています。
-実際にサイトを使いながら、UI・UX、品質の改善を継続しています。
-
-また、Web開発における技術検証にも取り組んでいます。
+UI・UXや品質改善、Web開発の技術検証を目的に制作しています。
 
 ## Live Demo
 
@@ -34,6 +31,15 @@
 
 ## Docker
 
+### Environment Variables
+
+`.env.example` を参考に `.env.local` を作成し、microCMS の接続情報を設定します。
+
+```env
+MICROCMS_API_KEY=your-api-key
+MICROCMS_SERVICE_DOMAIN=your-service-domain
+```
+
 ### Build
 
 ```bash
@@ -43,7 +49,11 @@ docker build -t corporate-site-demo .
 ### Start
 
 ```bash
-docker run --rm --name corporate-site-demo -p 3000:3000 corporate-site-demo
+docker run --rm \
+  --name corporate-site-demo \
+  --env-file .env.local \
+  -p 3000:3000 \
+  corporate-site-demo
 ```
 
 ### Check
