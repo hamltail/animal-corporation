@@ -40,6 +40,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Unit test
+        run: npm run test:unit
+
       - name: E2E test
         run: npm run test:e2e
 
