@@ -62,7 +62,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
 
   await expect(
     about.getByText(
-      "Animal Corporationは、デザインとテクノロジーを使って、WebサイトやWebサービスをつくる小さな工房です。目的や運用に合わせて適切な技術を選び、実際に使いながら、品質とユーザー体験を継続的に改善していきます。",
+      "Animal Corporationは、デザインとテクノロジーを使って、WebのUIと体験をつくる小さな工房です。目的や運用に合わせて設計・実装し、実際に使いながら、品質とユーザー体験を継続的に改善していきます。",
       { exact: true },
     ),
   ).toBeVisible();
@@ -78,7 +78,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
     },
     {
       title: "Right Technology",
-      text: "目的や運用に合わせて、最適なテクノロジーを選択します。",
+      text: "目的や運用に合わせて、適切なテクノロジーを選択します。",
     },
     {
       title: "Simple & Beautiful",
@@ -114,7 +114,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   const serviceDescription = service.locator("p").first();
 
   await expect(serviceDescription).toHaveText(
-    "デザインから開発、品質改善まで。ユーザー体験を重視したWebサイト・Webサービスを提供しています。",
+    "デザインから実装、品質改善まで。ユーザー体験を重視し、WebサイトやWebアプリのUIを設計・実装しています。",
   );
 
   const services = [
@@ -128,7 +128,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
     },
     {
       title: "Web Development",
-      text: "目的や運用に合わせて技術を選び、WebサイトやWebサービスを開発します。",
+      text: "目的や運用に合わせて技術を選び、WebサイトやWebアプリのUIを実装します。",
     },
     {
       title: "Quality & Improvement",
@@ -164,7 +164,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   const projectsDescription = projects.locator("p").first();
 
   await expect(projectsDescription).toHaveText(
-    "デザイン・開発・品質改善を通して取り組んだWebサイトやWebサービスをご紹介します。",
+    "デザイン・実装・品質改善を通して取り組んだWebサイトやWebアプリのUIをご紹介します。",
   );
 
   await expect(
@@ -379,7 +379,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
 
   await expect(
     contact.getByText(
-      "WebサイトやWebサービスの制作・改善について、お気軽にご相談ください。",
+      "WebサイトやWebアプリのUI設計・実装・改善について、お気軽にご相談ください。",
       { exact: true },
     ),
   ).toBeVisible();

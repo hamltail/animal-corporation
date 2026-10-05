@@ -19,7 +19,7 @@
     "label": "About Us",
     "leadFirst": "Through design and technology,",
     "leadSecond": "we create better experiences and a better future.",
-    "description": "Animal Corporation is a small workshop that creates websites and web services through design and technology. We choose technologies that fit each purpose and operation, then continuously improve quality and user experience by using and testing what we create.",
+    "description": "Animal Corporation is a small workshop that creates web interfaces and experiences through design and technology. We design and implement solutions to fit each purpose and operation, then continuously improve quality and user experience by using and testing what we create.",
     "humanCentered": "We put people first and design experiences around empathy.",
     "thoughtful": "We thoughtfully consider each purpose and the people who will use what we create.",
     "rightTechnology": "We choose the right technologies for each purpose and operation.",
@@ -27,17 +27,17 @@
   },
   "Service": {
     "label": "Services",
-    "introFirst": "From design and development to quality improvement.",
-    "introSecond": "We create websites and web services with a focus on user experience.",
+    "introFirst": "From design and implementation to quality improvement.",
+    "introSecond": "We design and implement user-focused interfaces for websites and web applications.",
     "webDesign": "We create clear and engaging web designs tailored to each brand and purpose.",
     "uiUxDesign": "We organize information and user flows to create clear and easy-to-use experiences.",
-    "webDevelopment": "We choose technologies that fit each purpose and operation to develop websites and web services.",
+    "webDevelopment": "We choose technologies that fit each purpose and operation to implement interfaces for websites and web applications.",
     "qualityImprovement": "We use and test what we create to identify issues and continuously improve quality and user experience."
   },
   "Projects": {
     "label": "Projects",
-    "introFirst": "Projects shaped through design, development, and quality improvement.",
-    "introSecond": "Explore the websites and web services we've worked on.",
+    "introFirst": "Projects shaped through design, implementation, and quality improvement.",
+    "introSecond": "Explore the websites and web application interfaces we've worked on.",
     "pawthOpen": "Open the Pawth project",
     "pawthDescription": "Trace your daily journey. A small journaling app.",
     "pawthWork": "Planning / UI & UX / Development / Operation",
@@ -81,7 +81,7 @@
   "Contact": {
     "label": "Contact",
     "title": "Shall we create a new experience together?",
-    "description": "Feel free to contact us about creating or improving websites and web services.",
+    "description": "Feel free to contact us about designing, implementing, or improving websites and web application interfaces.",
     "mailLabel": "Contact us by email",
     "button": "Contact Us"
   },
