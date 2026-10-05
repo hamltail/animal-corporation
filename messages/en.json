@@ -28,16 +28,16 @@
   "Service": {
     "label": "Services",
     "introFirst": "From design and implementation to quality improvement.",
-    "introSecond": "We design and implement user-focused interfaces for websites and web applications.",
+    "introSecond": "We focus on designing and implementing user-focused interfaces for websites and web applications.",
     "webDesign": "We create clear and engaging web designs tailored to each brand and purpose.",
     "uiUxDesign": "We organize information and user flows to create clear and easy-to-use experiences.",
-    "webDevelopment": "We choose technologies that fit each purpose and operation to implement interfaces for websites and web applications.",
+    "webDevelopment": "We choose technologies that fit each purpose and operation, focusing on interface implementation for websites and web applications.",
     "qualityImprovement": "We use and test what we create to identify issues and continuously improve quality and user experience."
   },
   "Projects": {
     "label": "Projects",
     "introFirst": "Projects shaped through design, implementation, and quality improvement.",
-    "introSecond": "Explore the websites and web application interfaces we've worked on.",
+    "introSecond": "Explore the websites and web applications we've worked on.",
     "pawthOpen": "Open the Pawth project",
     "pawthDescription": "Trace your daily journey. A small journaling app.",
     "pawthWork": "Planning / UI & UX / Development / Operation",

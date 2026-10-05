@@ -114,7 +114,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   const serviceDescription = service.locator("p").first();
 
   await expect(serviceDescription).toHaveText(
-    "デザインから実装、品質改善まで。ユーザー体験を重視し、WebサイトやWebアプリのUIを設計・実装しています。",
+    "デザインから実装、品質改善まで。ユーザー体験を重視し、WebサイトやWebアプリのUIを中心に設計・実装しています。",
   );
 
   const services = [
@@ -128,7 +128,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
     },
     {
       title: "Web Development",
-      text: "目的や運用に合わせて技術を選び、WebサイトやWebアプリのUIを実装します。",
+      text: "目的や運用に合わせて技術を選び、WebサイトやWebアプリのUIを中心に実装します。",
     },
     {
       title: "Quality & Improvement",
@@ -164,7 +164,7 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   const projectsDescription = projects.locator("p").first();
 
   await expect(projectsDescription).toHaveText(
-    "デザイン・実装・品質改善を通して取り組んだWebサイトやWebアプリのUIをご紹介します。",
+    "デザイン・実装・品質改善を通して取り組んだWebサイトやWebアプリをご紹介します。",
   );
 
   await expect(

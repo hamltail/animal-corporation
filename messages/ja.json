@@ -28,16 +28,16 @@
   "Service": {
     "label": "事業内容",
     "introFirst": "デザインから実装、品質改善まで。",
-    "introSecond": "ユーザー体験を重視し、WebサイトやWebアプリのUIを設計・実装しています。",
+    "introSecond": "ユーザー体験を重視し、WebサイトやWebアプリのUIを中心に設計・実装しています。",
     "webDesign": "ブランドや目的に合わせて、伝わりやすく魅力的なWebデザインをつくります。",
     "uiUxDesign": "情報設計や導線を整え、わかりやすく使いやすい体験を設計します。",
-    "webDevelopment": "目的や運用に合わせて技術を選び、WebサイトやWebアプリのUIを実装します。",
+    "webDevelopment": "目的や運用に合わせて技術を選び、WebサイトやWebアプリのUIを中心に実装します。",
     "qualityImprovement": "実際に使い、試しながら課題を見つけ、品質とユーザー体験を継続的に改善します。"
   },
   "Projects": {
     "label": "制作実績",
     "introFirst": "デザイン・実装・品質改善を通して取り組んだ",
-    "introSecond": "WebサイトやWebアプリのUIをご紹介します。",
+    "introSecond": "WebサイトやWebアプリをご紹介します。",
     "pawthOpen": "パウスのプロジェクトを開く",
     "pawthDescription": "日々の足あとを描く。小さな日記アプリ",
     "pawthWork": "企画 / UI・UX / 開発 / 運用",
