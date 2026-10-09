@@ -1,0 +1,54 @@
+.scrollLink {
+  opacity: 0;
+  visibility: hidden;
+  animation: scroll-appear 700ms ease-out 3.4s both;
+}
+
+.scrollLine {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.scrollLine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  animation: scroll-line-move 3s ease-in-out infinite;
+}
+
+@keyframes scroll-appear {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes scroll-line-move {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  35% {
+    opacity: 0.6;
+  }
+
+  75% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
