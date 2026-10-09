@@ -9,6 +9,8 @@ import {
   useTeamSelection,
 } from "@/components/TeamSelectionProvider";
 
+import styles from "./HeroScroll.module.css";
+
 const casualImages: Record<TeamMemberId, string> = {
   goro: "/images/team-goro-casual.webp",
   ko: "/images/team-ko-casual.webp",
@@ -21,16 +23,16 @@ export default function Hero() {
   const { selectedMemberId } = useTeamSelection();
 
   return (
-    <section className="relative flex min-h-150 items-center overflow-hidden md:min-h-175 lg:min-h-200">
+    <section className="relative isolate flex min-h-[calc(100svh-5rem)] items-center overflow-hidden">
       {selectedMemberId && (
         <div className="pointer-events-none absolute inset-0 z-0 2xl:left-1/2 2xl:w-full 2xl:max-w-[1600px] 2xl:-translate-x-1/2">
           <div
-            className="absolute right-[-8%] bottom-[4%] h-[38%] w-[72%] opacity-30 md:right-0 md:bottom-[8%] md:h-[42%] md:w-[52%] md:opacity-35 lg:h-[27vw] lg:w-[48%] 2xl:h-[432px] 2xl:w-[768px]"
+            className="absolute right-0 bottom-16 aspect-video w-[min(100%,55svh)] opacity-30 md:bottom-20 md:w-[min(75%,55svh)] md:opacity-35 lg:bottom-[8%] lg:w-[48%] 2xl:w-[768px]"
             style={{
               maskImage:
-                "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
               WebkitMaskImage:
-                "linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
             }}
             aria-hidden="true"
           >
@@ -39,15 +41,15 @@ export default function Hero() {
               src={casualImages[selectedMemberId]}
               alt=""
               fill
-              sizes="(min-width: 1536px) 768px, (min-width: 1024px) 48vw, (min-width: 768px) 52vw, 72vw"
-              className="object-cover object-center"
+              sizes="(min-width: 1536px) 768px, (min-width: 1024px) 48vw, (min-width: 768px) 75vw, 100vw"
+              className="object-contain object-center"
               priority
             />
           </div>
         </div>
       )}
 
-      <Container className="relative z-10 flex h-full items-center">
+      <Container className="relative z-10">
         <div className="max-w-full md:max-w-160">
           <h1
             id="hero-title"
@@ -73,6 +75,14 @@ export default function Hero() {
           </p>
         </div>
       </Container>
+
+      <a
+        href="#about"
+        className={`text-muted absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[10px] font-medium tracking-[0.3em] md:bottom-8 ${styles.scrollLink}`}
+      >
+        SCROLL
+        <span className={styles.scrollLine} aria-hidden="true" />
+      </a>
     </section>
   );
 }
