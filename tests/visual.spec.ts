@@ -34,6 +34,11 @@ test("Animal Corporationの見た目が基準画像と一致する", async ({ pa
   // スクロール連動要素の状態が安定するのを待つ
   await page.waitForTimeout(1000);
 
+  // Next.jsの開発用インジケーターを撮影対象から除外
+  await page.addStyleTag({
+    content: "nextjs-portal { display: none !important; }",
+  });
+
   await expect(page).toHaveScreenshot("animal-corporation.png", {
     fullPage: true,
     animations: "disabled",

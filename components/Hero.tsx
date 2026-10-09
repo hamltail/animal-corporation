@@ -27,7 +27,7 @@ export default function Hero() {
       {selectedMemberId && (
         <div className="pointer-events-none absolute inset-0 z-0 2xl:left-1/2 2xl:w-full 2xl:max-w-[1600px] 2xl:-translate-x-1/2">
           <div
-            className="absolute right-0 bottom-16 aspect-video w-[min(100%,55svh)] opacity-30 md:bottom-20 md:w-[min(75%,55svh)] md:opacity-35 lg:bottom-[8%] lg:w-[48%] 2xl:w-[768px]"
+            className="absolute right-0 bottom-16 aspect-video w-[min(100%,55svh)] opacity-30 md:bottom-20 md:w-[min(75%,55svh)] md:opacity-35 lg:bottom-[8%] lg:w-[48%] 2xl:w-3xl"
             style={{
               maskImage:
                 "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
