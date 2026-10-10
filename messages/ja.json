@@ -106,6 +106,7 @@
     "label": "言語切り替え"
   },
   "ThemeSwitcher": {
+    "change": "テーマを変更",
     "light": "ライトテーマ",
     "dark": "ダークテーマ",
     "system": "システムテーマ"

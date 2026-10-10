@@ -106,6 +106,7 @@
     "label": "Language switcher"
   },
   "ThemeSwitcher": {
+    "change": "Change theme",
     "light": "Light theme",
     "dark": "Dark theme",
     "system": "System theme"
