@@ -18,6 +18,41 @@ const casualImages: Record<TeamMemberId, string> = {
   ken: "/images/team-ken-casual.webp",
 };
 
+const LETTER_INTERVAL_MS = 75;
+
+function AnimatedWord({
+  word,
+  startDelayMs,
+}: {
+  word: string;
+  startDelayMs: number;
+}) {
+  return (
+    <span className={styles.word} aria-hidden="true">
+      {Array.from(word).map((letter, index) => (
+        <span
+          key={index}
+          className={styles.letter}
+          style={{
+            animationDelay: `${startDelayMs + index * LETTER_INTERVAL_MS}ms`,
+          }}
+        >
+          {index === 0 ? (
+            <span className={styles.firstLetter}>
+              <span className={styles.lowercaseInitial}>{letter}</span>
+              <span className={styles.uppercaseInitial}>
+                {letter.toUpperCase()}
+              </span>
+            </span>
+          ) : (
+            letter
+          )}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function Hero() {
   const t = useTranslations("Hero");
   const { selectedMemberId } = useTeamSelection();
@@ -53,22 +88,28 @@ export default function Hero() {
         <div className="max-w-full md:max-w-160">
           <h1
             id="hero-title"
+            aria-label="Design × Technology"
             className="hero-title font-english text-foreground text-[80px] leading-[1.1] font-normal tracking-widest md:text-[100px] lg:text-[120px]"
           >
             <span className="inline-flex items-center gap-6 md:gap-8 lg:gap-10">
-              <span className="hero-design opacity-0">Design</span>
+              <AnimatedWord word="design" startDelayMs={0} />
 
-              <span className="hero-cross text-primary opacity-0">×</span>
+              <span
+                className={`text-primary ${styles.cross}`}
+                aria-hidden="true"
+              >
+                ×
+              </span>
             </span>
 
             <br />
 
-            <span className="hero-technology inline-block opacity-0">
-              Technology
-            </span>
+            <AnimatedWord word="technology" startDelayMs={450} />
           </h1>
 
-          <p className="hero-lead text-muted mt-8 text-base leading-[1.6] font-medium opacity-0 md:mt-16 md:text-xl lg:mt-24 lg:text-2xl">
+          <p
+            className={`text-muted mt-8 text-base leading-[1.6] font-medium md:mt-16 md:text-xl lg:mt-24 lg:text-2xl ${styles.lead}`}
+          >
             {t("leadFirst")}
             <br />
             {t("leadSecond")}
