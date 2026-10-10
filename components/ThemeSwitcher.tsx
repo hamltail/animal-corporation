@@ -5,6 +5,8 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 import { useTheme } from "@/components/ThemeProvider";
 
+import styles from "./FloatingControls.module.css";
+
 const themes = [
   {
     value: "light",
@@ -141,7 +143,7 @@ export default function ThemeSwitcher() {
         aria-controls={isOpen ? "theme-options" : undefined}
         title={t("change")}
         onClick={() => setIsOpen((current) => !current)}
-        className="border-border bg-surface text-foreground hover:bg-surface-soft grid size-10 cursor-pointer place-items-center rounded-full border shadow-md transition-colors"
+        className={`border-border bg-surface text-foreground hover:bg-surface-soft grid size-10 cursor-pointer place-items-center rounded-full border transition-[background-color,box-shadow] duration-300 ${styles.themeTrigger}`}
       >
         <span className="size-5" aria-hidden="true">
           {selectedTheme.icon}
