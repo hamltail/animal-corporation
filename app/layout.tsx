@@ -10,6 +10,8 @@ import ThemeProvider from "@/components/ThemeProvider";
 
 import "./globals.css";
 
+const SITE_URL = "https://animal.hamltail.dev";
+
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -25,11 +27,33 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
   const t = await getTranslations("Metadata");
 
+  const title = t("title");
+  const description = t("description");
+
   return {
-    title: "Animal Corporation",
-    description: t("description"),
+    metadataBase: new URL(SITE_URL),
+    title,
+    description,
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      type: "website",
+      url: "/",
+      siteName: "Animal Corporation",
+      title,
+      description,
+      locale: locale === "ja" ? "ja_JP" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/opengraph-image"],
+    },
     icons: {
       icon: "/favicon.png",
     },

@@ -1,6 +1,7 @@
 {
   "Metadata": {
-    "description": "デザインとテクノロジーで、より良い体験と未来を作る。"
+    "title": "Animal Corporation | デザインとテクノロジーでWebのUIと体験をつくる",
+    "description": "デザインとテクノロジーを使い、目的や運用に合わせてWebサイトやWebアプリのUIを設計・実装する小さな工房。ユーザー体験を大切に、デザインから品質改善まで取り組んでいます。"
   },
   "Header": {
     "globalNavigation": "グローバルナビゲーション",
