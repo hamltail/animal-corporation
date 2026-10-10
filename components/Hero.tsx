@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
       )}
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 -translate-y-10">
         <div className="max-w-full md:max-w-160">
           <h1
             id="hero-title"
