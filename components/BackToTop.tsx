@@ -37,7 +37,7 @@ export default function BackToTop() {
       onClick={scrollToTop}
       className={`${styles.backToTop} border-border bg-surface text-muted hover:bg-surface-soft hover:text-foreground fixed right-8 bottom-8 z-40 inline-flex size-16 cursor-pointer items-center justify-center rounded-full border backdrop-blur-md transition-[opacity,transform,visibility,background-color,box-shadow,color] duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none ${
         isVisible
-          ? "visible translate-y-0 opacity-100 hover:-translate-y-0.5"
+          ? "visible translate-y-0 opacity-100 hover:-translate-y-0.5 hover:-rotate-6"
           : "invisible translate-y-2 opacity-0"
       }`}
       aria-label={t("label")}
