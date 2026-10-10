@@ -23,12 +23,19 @@ const LETTER_INTERVAL_MS = 75;
 function AnimatedWord({
   word,
   startDelayMs,
+  direction,
 }: {
   word: string;
   startDelayMs: number;
+  direction: "left" | "right";
 }) {
   return (
-    <span className={styles.word} aria-hidden="true">
+    <span
+      className={`${styles.word} ${
+        direction === "left" ? styles.fromLeft : styles.fromRight
+      }`}
+      aria-hidden="true"
+    >
       {Array.from(word).map((letter, index) => (
         <span
           key={index}
@@ -92,7 +99,7 @@ export default function Hero() {
             className="hero-title font-english text-foreground text-[80px] leading-[1.1] font-normal tracking-widest md:text-[100px] lg:text-[120px]"
           >
             <span className="inline-flex items-center gap-6 md:gap-8 lg:gap-10">
-              <AnimatedWord word="design" startDelayMs={0} />
+              <AnimatedWord word="design" startDelayMs={0} direction="left" />
 
               <span
                 className={`text-primary ${styles.cross}`}
@@ -104,7 +111,11 @@ export default function Hero() {
 
             <br />
 
-            <AnimatedWord word="technology" startDelayMs={450} />
+            <AnimatedWord
+              word="technology"
+              startDelayMs={450}
+              direction="right"
+            />
           </h1>
 
           <p
