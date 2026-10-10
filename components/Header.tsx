@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-import Container from "@/components/Container";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Header() {
@@ -37,7 +36,7 @@ export default function Header() {
 
   return (
     <header className="bg-surface relative z-50">
-      <Container className="flex h-20 items-center justify-between">
+      <div className="flex h-20 w-full items-center justify-between px-7 md:px-11">
         <Link href="/" className="flex shrink-0 items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
@@ -83,7 +82,7 @@ export default function Header() {
             />
             <span
               className={`bg-foreground h-0.5 w-6 transition-opacity duration-300 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
+                isMenuOpen ? "opacity-0" : ""
               }`}
             />
             <span
@@ -95,7 +94,7 @@ export default function Header() {
 
           <ThemeSwitcher />
         </div>
-      </Container>
+      </div>
 
       <nav
         id="mobile-menu"

@@ -1,0 +1,15 @@
+.themeTrigger {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.backToTop {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+:global(.dark) .themeTrigger,
+:global(.dark) .backToTop {
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    0 0 12px rgba(210, 180, 93, 0.18),
+    0 0 26px rgba(210, 180, 93, 0.08);
+}

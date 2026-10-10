@@ -77,19 +77,26 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
           const relativeIndex =
             (index - activeIndex + projects.length) % projects.length;
 
-          const position =
-            relativeIndex === 0
-              ? "z-20 translate-z-0"
-              : relativeIndex === 1
-                ? "z-10 translate-x-60 -translate-z-160 -rotate-y-30 sm:translate-x-70 md:translate-x-80"
-                : "z-10 -translate-x-150 -translate-z-160 rotate-y-15 sm:-translate-x-175 md:-translate-x-200";
+          const isActive = relativeIndex === 0;
+
+          const position = isActive
+            ? "translate-x-0 translate-z-0 rotate-y-0"
+            : relativeIndex === 1
+              ? "translate-x-60 -translate-z-160 -rotate-y-15 sm:translate-x-90 md:translate-x-140"
+              : "-translate-x-60 -translate-z-160 rotate-y-15 sm:-translate-x-90 md:-translate-x-140";
 
           return (
             <div
               key={index}
-              className={`absolute top-1/2 left-1/2 w-[calc(100%-2rem)] max-w-90 -translate-x-1/2 -translate-y-1/2 transform-3d transition-transform duration-700 ease-in-out sm:w-105 sm:max-w-none md:w-120 ${position}`}
+              className={`absolute top-1/2 left-1/2 w-[calc(100%-2rem)] max-w-90 -translate-x-1/2 -translate-y-1/2 transform-3d sm:w-105 sm:max-w-none md:w-120 ${
+                isActive ? "z-20" : "z-10"
+              }`}
             >
-              {project}
+              <div
+                className={`transform-3d transition-transform duration-700 ease-in-out ${position}`}
+              >
+                {project}
+              </div>
             </div>
           );
         })}
