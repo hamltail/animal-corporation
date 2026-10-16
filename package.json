@@ -1,0 +1,14 @@
+{
+  "name": "corporate-site-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Corporate website demo for Animal Corporation, a fictional design and technology company",
+  "author": "h-waji (hamltail)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}
