@@ -4,6 +4,14 @@
 
 UI・UXや品質改善、Web開発の技術検証を目的に制作しています。
 
+## Latest Release
+
+### 2026-10-17
+
+- Pawthのプロジェクト画像を最新の画面に更新しました。
+- 開発環境の管理負担を軽減するため、Visual Regression Testを廃止しました。
+- CodeQLの運用終了に合わせて、READMEの技術スタックを整理しました。
+
 ## Live Demo
 
 🌐 [Webサイトを見る](https://animal.hamltail.dev/)
@@ -22,14 +30,14 @@ Alternative: [Vercel Deployment](https://corporate-site-demo-dun.vercel.app/)
 | Frontend       | TypeScript, React, Next.js, Tailwind CSS, next-intl      |
 | CMS            | microCMS                                                 |
 | Testing        | Playwright, axe-core, Lighthouse CI, k6, Vitest, Stryker |
-| Security       | OWASP ZAP, CodeQL                                        |
+| Security       | OWASP ZAP                                                |
 | Infrastructure | Docker, Vercel, GitHub Actions                           |
 
 ## Technical Decisions
 
 当初は HTML・JavaScript・Vite を用いた静的サイトとして制作していましたが、機能拡張や継続的な改善を行いやすくするため、Next.js へ移行しました。
 
-アクセシビリティやE2Eテスト、Visual Regression Testなどを取り入れ、実装後も継続的に品質を確認・改善できる構成にしています。
+アクセシビリティやE2Eテストなどを取り入れ、実装後も継続的に品質を確認・改善できる構成にしています。
 
 ## Development
 
